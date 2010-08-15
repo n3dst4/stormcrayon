@@ -1,0 +1,5 @@
+body { background: white url(/static/images/right.png) repeat-x; }
+
+header { background: black url(/static/images/top.jpg); }
+
+div.left-stripe { background: black url(/static/images/left.png); }

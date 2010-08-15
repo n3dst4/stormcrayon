@@ -1,0 +1,9 @@
+header { width: 760px; height: 285px; margin: 0 auto; position: relative;}
+
+div.left-stripe { width: 780px; height: 285px; margin: 0 auto; position: absolute; top: 0; right: 760px;}
+
+#i-am-neil-de-carteret {position: absolute; top: 15px; left: 0px;}
+
+#super-links {position: absolute; top: 45px; right: 10px;}
+#super-links ul {list-style-type: none;}
+#super-links li {display: inline; }
