@@ -4,7 +4,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@domain.com'),
+    ('Neil de Carteret', 'nel.decarteret@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -90,7 +90,6 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
-    # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     'south',
     'stormcrayon.core',

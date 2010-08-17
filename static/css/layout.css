@@ -1,4 +1,6 @@
-header { width: 760px; height: 285px; margin: 0 auto; position: relative;}
+div#container { width: 760px; margin: 0 auto; position: relative;}
+
+header { width:100%; height: 285px; position: relative;}
 
 div.left-stripe { width: 780px; height: 285px; margin: 0 auto; position: absolute; top: 0; right: 760px;}
 
@@ -6,4 +8,17 @@ div.left-stripe { width: 780px; height: 285px; margin: 0 auto; position: absolut
 
 #super-links {position: absolute; top: 45px; right: 10px;}
 #super-links ul {list-style-type: none;}
-#super-links li {display: inline; }
+#super-links li {display: inline; padding-left: 1.5em;}
+
+div.main {}
+
+
+/* Small-screen devices */
+@media screen and (max-width:750px) {
+    div#container { width:100%; }
+    header { text-align: center; }
+    #i-am-neil-de-carteret {position: static; margin: 0 auto; }
+    #super-links {top: 55px; left: 10px;}
+    #super-links ul {padding: 0; margin: 0;}
+    #super-links li {padding: 0 1em 0 0;}
+}

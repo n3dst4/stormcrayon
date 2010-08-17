@@ -1,5 +1,12 @@
 body { background: white url(/static/images/right.png) repeat-x; }
 
-header { background: black url(/static/images/top.jpg); }
+header { background: black url(/static/images/top.jpg); color: #aaa; }
+
+#super-links a { color: #bbb }
+#super-links a:hover { color: #fff }
 
 div.left-stripe { background: black url(/static/images/left.png); }
+
+@media screen and (max-width:750px) {
+    header { background-position: center; }
+}
