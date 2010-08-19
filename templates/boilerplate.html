@@ -8,21 +8,20 @@
   <title>{% block title %}Neil de Carteret{% endblock %}</title>
   <meta name="description" content="{% block description %}Neil de Carteret's website{% endblock %}">
   <meta name="author" content="{% block authon %}Neil de Carteret{% endblock %}">
-  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.5;">
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/static/images/icon.png">
   <link rel="stylesheet" href="/static/css/reset.css?v=1">
-  <link rel="stylesheet" media="handheld" href="/static/css/handheld.css?v=1">
-  {% block styles %}
-  {% endblock %}
+  
+  {% block styles %}{# MAGICK!!! #}{% endblock %}
   <script src="/static/js/modernizr-1.5.min.js"></script>
-
+  
 </head>
-<!--[if lt IE 7 ]> <body class="ie6"> <![endif]-->
-<!--[if IE 7 ]>    <body class="ie7"> <![endif]-->
-<!--[if IE 8 ]>    <body class="ie8"> <![endif]-->
-<!--[if IE 9 ]>    <body class="ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
+<!--[if lt IE 7 ]><body class="ie6 lt7 lt8 lt9"><![endif]-->
+<!--[if IE 7 ]><body class="ie7 gt6 lt8 lt9"><![endif]-->
+<!--[if IE 8 ]><body class="ie8 gt6 gt7 lt9"><![endif]-->
+<!--[if IE 9 ]><body class="ie9 gt6 gt7 gt8"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><body><!--<![endif]-->
 
   <div id="container">
     <header>
@@ -42,6 +41,7 @@
   <script>!window.jQuery && document.write('<script src="/static/js/jquery-1.4.2.min.js"><\/script>')</script>
   <script src="/static/js/plugins.js?v=1"></script>
   <script src="/static/js/script.js?v=1"></script>
+  <script src="/static/js/jquery.mediaqueries.js?v=1" type="text/javascript"></script> 
 
   <!--[if lt IE 7 ]>
     <script src="/static/js/dd_belatedpng.js?v=1"></script>
