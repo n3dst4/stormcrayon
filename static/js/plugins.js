@@ -24,6 +24,7 @@ window.log = function(){
   }
 };
 
+/* This is part of Paul Irish's boilerplate, but I'm unconvinced.
 (function(doc){
   var write = doc.write;
   doc.write = function(q){ 
@@ -31,5 +32,11 @@ window.log = function(){
     if (/docwriteregexwhitelist/.test(q)) write.apply(doc,arguments);  
   };
 })(document);
+//*/
 
-
+jQuery(function(){
+  if ($("body").is(".lt7")) {
+    DD_belatedPNG.fix("img");
+  }
+});
+  

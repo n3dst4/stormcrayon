@@ -1,19 +1,20 @@
 {% extends "boilerplate.html" %}
 
 {% block styles %}
-    <link rel="stylesheet" href="/static/css/colours.css">
     <link rel="stylesheet" href="/static/css/fonts.css">
+    <link rel="stylesheet" href="/static/css/colours.css">
     <link rel="stylesheet" href="/static/css/layout.css">
     <link rel="stylesheet" media="only screen and (min-width: 601px)" href="/static/css/large.css">
     <link rel="stylesheet" media="only screen and (max-width: 600px)" href="/static/css/small.css?v=1">
 
+    
     <style type="text/css">
     html { background-color: red; }
     @media only all { html { background-color: green; } }
     </style>
 
     <script type="text/javascript">
-    {%include "styletest.js"%}    
+    {%include "grodyquery-part-one.js"%}    
     </script>
     
     <style type="text/css">
@@ -43,3 +44,7 @@
 {% block main %}Stormcrayon main{% endblock %}
 
 {% block footer %}Stormcrayon footer{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="/static/js/grodyquery-part-two.js?v=1"></script>
+{% endblock %}

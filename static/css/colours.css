@@ -2,6 +2,6 @@ body { background-color: white; color: black; }
 header { background-color: black; color: #aaa; }
 div.left-stripe { background-color: black; color: #aaa; }
 
-#super-links a { color: #bbb }
-#super-links a:hover { color: #fff }
+#super-links a { color: #bbb; text-shadow: #000 0px 2px 3px; }
+#super-links a:hover { color: #fff; text-shadow: #ddd 0px 0px 10px; }
 
