@@ -5,3 +5,4 @@ div.left-stripe { background-color: black; color: #aaa; }
 #super-links a { color: #bbb; text-shadow: #000 0px 2px 3px; }
 #super-links a:hover { color: #fff; text-shadow: #ddd 0px 0px 10px; }
 
+footer { border-top: 1px solid #ccc; color: #999; }

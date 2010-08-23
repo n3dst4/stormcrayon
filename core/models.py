@@ -15,7 +15,7 @@ class FeaturedLink (models.Model):
             "size": (220, 140),
             #"crop": ",0",
             "quality": 95,
-            "options": {"crop": "smart", "detail": True},
+            "options": {"crop": ",0"},
         }
     )
     category = models.CharField(max_length=255, choices=(
