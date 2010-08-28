@@ -1,4 +1,9 @@
-#super-links a { text-decoration: none; }
-#super-links a:hover { text-decoration: underline; }
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
 
 footer { font-size: 0.7em; }
+
+h2 { font-size: 1.6em; margin: 1em 0 0.5em 0;  }
+
+h3 { margin-top: 1em; }

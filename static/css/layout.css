@@ -1,7 +1,10 @@
 
-#super-links ul {list-style-type: none; margin: 0;}
+#super-links ul {list-style-type: none; margin: 0; display: inline;}
 #super-links li {display: inline; padding-left: 1.5em;}
+#super-links li:first-child {padding-left: 0;}
+body.lt9 #super-links li {padding-left: expression(this.previousSibling==null?'0':'1.5em');}
 
 header { background-position: center; }
 
-footer { text-align: center;}
+footer { text-align: center; margin: 2em 0 4em 0;}
+

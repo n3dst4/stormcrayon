@@ -1,23 +1,79 @@
-div#container { max-width: 760px; margin: 0 auto; position: relative;}
+/*
+ * grid system
+ * see http://www.usabilitypost.com/2009/06/19/the-1kb-css-grid-part-3/
+ */
+.grid_1 { width:6.25%; } /* 60 */
+.grid_2 { width:14.583%; } /* 140 */
+.grid_3 { width:22.917%; } /* 220 */
+.grid_4 { width:31.00%; } /* 300 */
+.grid_5 { width:41.667%; } /* 380 */
+.grid_6 { width:47.2%; } /* 460  Grrrr bloody exploder :( */
+.grid_7 { width:56.25%; } /* 540 */
+.grid_8 { width:63.00%; } /* 620 */
+.grid_9 { width:72.917%; } /* 700 */
+.grid_10 { width:81.25%; } /* 780 */
+.grid_11 { width:89.583%; } /* 860 */
+.grid_12 { width:97.917%; } /* 940 */
+.column { margin: 0 1.04%; overflow: hidden; float: left; }
+.row { width: 97.875%; margin: 0 1.064%; overflow: hidden; }
 
-body.ie6 div#container {
-    width: expression((document.documentElement.clientWidth >=760)?760:document.documentElement.clientWidth );
-    /*width: 760px;*/
-}
 
-header { width:100%; height: 285px; position: relative;}
+/*
+ * layout
+ */
+div#container { max-width: 960px; margin: 0 auto; position: relative;}
+body.ie6 div#container { width: expression(calculatePageWidth()); }
 
-div.left-stripe { width: 780px; height: 285px; margin: 0 auto; position: absolute; top: 0; right: 760px;}
-
+header { width:100%; height: 286px; position: relative;}
+header .row .column, header .row { height: 100%; position: relative; overflow: visible;}
+.header-secondary-info { text-align: right; position: absolute; top: 2.5em; right: 10px;}
+div.left-stripe { width: 960px; height: 285px; margin: 0 auto; position: absolute; top: 0; right: 960px;}
 #i-am-neil-de-carteret {position: absolute; top: 15px; left: 0px;}
-
-#super-links {position: absolute; top: 45px; right: 10px;}
-
-
+#super-links {}
+.linkette { margin: 0 0 1em 0; padding: 1em;}
 
 
 
+/*
+ * colours and backgrounds
+ */
 body { background-image: url(/static/images/right.png); background-repeat: repeat-x; }
-header { background-image: url(/static/images/top.jpg); }
+header { background-image: url(/static/images/top.jpg); background-repeat: no-repeat;}
 div.left-stripe { background-image: url(/static/images/left.png); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -1,22 +1,34 @@
 {% extends "boilerplate.html" %}
 
 {% block styles %}
+    <script type="text/javascript">
+    // this gets used in a CSS expression to IE can simulate "max-width"
+    function calculatePageWidth () {
+        return Math.min(document.documentElement.clientWidth, 960);
+    }
+    </script>
+
     <link rel="stylesheet" href="/static/css/fonts.css">
     <link rel="stylesheet" href="/static/css/colours.css">
     <link rel="stylesheet" href="/static/css/layout.css">
     <link rel="stylesheet" media="only screen and (min-width: 601px)" href="/static/css/large.css">
     <link rel="stylesheet" media="only screen and (max-width: 600px)" href="/static/css/small.css?v=1">
 
-    
+    <!-- Grodyquery: first we make the html background red, then use a CSS
+    media query to turn it green -->
     <style type="text/css">
     html { background-color: red; }
     @media only all { html { background-color: green; } }
     </style>
 
+    <!--this script then tests the background to see if it's red or green, and
+    thus determines whether media queries are supported. If not, magic ensues
+    to find all the <link media="only screen and..." tags and repurpose them -->
     <script type="text/javascript">
     {%include "grodyquery-part-one.js"%}    
     </script>
     
+    <!-- finally set the html background back again -->
     <style type="text/css">
     html { background-color: white; }
     </style>
@@ -26,24 +38,52 @@
 
 
 {% block header %}
-    <div class="left-stripe"><!----></div>
-    <img id="i-am-neil-de-carteret" src="/static/images/i-am-neil-de-carteret.png" alt="I am Neil de Carteret">
-    <nav id="super-links">
-        <ul>
-            <li><a href="">Home</a>
-            <li>|
-            <li><a href="">Contact</a>
-            <li>|
-            <li><a href="">Blog</a>
-            <li>|
-            <li><a href="">GitHub</a>
-        </ul>
-    </nav>
+    <header>
+        <div class="left-stripe"><!----></div>
+        <div class="row">
+            <div class="column grid_4">
+                <img id="i-am-neil-de-carteret" src="/static/images/i-am-neil-de-carteret.png" alt="I am Neil de Carteret">
+            </div>
+            <div class="column grid_8 header-secondary-info">
+                <nav id="super-links">
+                    <ul>
+                        <li><a href="{% url stormcrayon.core.views.portfolio %}">My Work</a>
+                        <li><a href="{% url about %}">About me</a>
+                        <li><a href="{% url resume %}">Resum&eacute;</a>
+                    </ul>
+                    
+                    <div>
+                        I'm also on
+                        <ul>
+                            <li>
+                                <a href="http://blog.lumphammer.com">
+                                    Posterous
+                                    <img src="/static/images/external.png" alt="(external link)"/></a>
+                            <li>
+                                <a href="http://github.com/n3dst4" class="external">
+                                    GitHub
+                                    <img src="/static/images/external.png" alt="(external link)"/></a>
+                            <li>
+                                <a href="http://uk.linkedin.com/in/neildecarteret">
+                                    LinkedIn
+                                    <img src="/static/images/external.png" alt="(external link)"/></a>
+                        </ul>
+                    </div>
+                </nav>
+                Email me <a class="protected-email" href="mailto:neil [at] neildecarteret.com">neil [at] neildecarteret.com</a>
+            </div>
+        </div>
+    </header>
 {% endblock %}
 
 {% block main %}Stormcrayon main{% endblock %}
 
 {% block footer %}
+
+<div class="row">
+    
+</div>
+
 All content on this site is copyright &copy; 2010 by Neil de Carteret. All rights reserved unless otherwise noted.
 This site is <a href="http://validator.w3.org/check?uri=referer">HTML5ish</a>.
 {% endblock %}

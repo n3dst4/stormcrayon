@@ -1,0 +1,34 @@
+{% extends "stormcrayon.html" %}
+{% load macros %}
+
+{% macro linkette link %}
+    <div class="linkette">
+        {% if link.image %}
+            <a href="{{link.address}}" target="_new">
+                <img src="{{link.image.thumbnail.absolute_url}}"
+                     alt="Thumbnail image of {{link.name}}"
+                     title="{{link.name}}">
+            </a>
+        {% endif %}
+        {{link.description_html|safe}}
+    </div>
+{% endmacro %}
+
+{% block main %}
+    <div class="row">
+        <div class="column grid_6">
+            <h2>Websites I've made</h2>
+            {% for link in sites %}
+                {% usemacro linkette link %}
+            {% endfor %}
+        </div>
+        
+        <div class="column grid_6 other_projects">
+            <h2>Other projects</h2>
+            {% for link in other %}
+                {% usemacro linkette link %}
+            {% endfor %}
+        </div>
+    </row>
+{% endblock %}
+
