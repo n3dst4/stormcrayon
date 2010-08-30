@@ -14,6 +14,9 @@
     <link rel="stylesheet" media="only screen and (min-width: 601px)" href="/static/css/large.css">
     <link rel="stylesheet" media="only screen and (max-width: 600px)" href="/static/css/small.css?v=1">
 
+    <!--<script type="text/javascript" src="http://use.typekit.com/yqr3gfh.js"></script>-->
+    <!--<script type="text/javascript">try{Typekit.load();}catch(e){}</script>-->
+
     <!-- Grodyquery: first we make the html background red, then use a CSS
     media query to turn it green -->
     <style type="text/css">
@@ -46,32 +49,29 @@
             </div>
             <div class="column grid_8 header-secondary-info">
                 <nav id="super-links">
-                    <ul>
-                        <li><a href="{% url stormcrayon.core.views.portfolio %}">Examples of my work</a>
-                        <li><a href="{% url about %}">About me</a>
-                        <li><a href="{% url resume %}">Resum&eacute;</a>
-                    </ul>
-                    
-                    <div>
+                    <p>
+                        Read&nbsp;
+                        <a href="{% url stormcrayon.core.views.portfolio %}">examples of my work</a>,&nbsp;
+                        <a href="{% url about %}">about me</a>,&nbsp;&nbsp;or&nbsp;&nbsp;
+                        <a href="{% url resume %}">my resum&eacute;</a>
+                    </p>
+                    <p>
                         I'm also on
-                        <ul>
-                            <li>
-                                <a href="http://blog.lumphammer.com">
-                                    Posterous
-                                    <img src="/static/images/external.png" alt="(external link)"/></a>
-                            <li>
-                                <a href="http://github.com/n3dst4" class="external">
-                                    GitHub
-                                    <img src="/static/images/external.png" alt="(external link)"/></a>
-                            <li>
-                                <a href="http://uk.linkedin.com/in/neildecarteret">
-                                    LinkedIn
-                                    <img src="/static/images/external.png" alt="(external link)"/></a>
-                            <!-- Technically I'm on Facebook too, but I never use it. -->
-                        </ul>
-                    </div>
+                        <a href="http://blog.lumphammer.com">
+                            Posterous
+                            <img src="/static/images/external.png" alt="(external link)"/></a>,
+                        <a href="http://github.com/n3dst4" class="external">
+                            GitHub
+                            <img src="/static/images/external.png" alt="(external link)"/></a>, and 
+                        <a href="http://uk.linkedin.com/in/neildecarteret">
+                            LinkedIn
+                            <img src="/static/images/external.png" alt="(external link)"/></a>
+                        <!-- Technically I'm on Facebook too, but I never use it. -->
+                    </p>
+                    <p>
+                        Email me on <a class="protected-email" href="mailto:neil [at] neildecarteret.com">neil [at] neildecarteret.com</a>
+                    </p>
                 </nav>
-                Email me <a class="protected-email" href="mailto:neil [at] neildecarteret.com">neil [at] neildecarteret.com</a>
             </div>
         </div>
     </header>

@@ -6,7 +6,7 @@
         {% if link.image %}
             <a href="{{link.address}}" target="_new">
                 <img src="{{link.image.thumbnail.absolute_url}}"
-                     alt="Thumbnail image of {{link.name}}"
+                     alt="{{link.name}}"
                      title="{{link.name}}">
             </a>
         {% endif %}

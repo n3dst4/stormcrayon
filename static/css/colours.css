@@ -1,5 +1,5 @@
-body { background-color: white; color: black; }
-header { background-color: black; color: #ddd; }
+body { background-color: white; color: #555; }
+header { background-color: black; color: #bbb; }
 div.left-stripe { background-color: black; color: #aaa; }
 
 header * { text-shadow: #000 0px 2px 3px; }
@@ -11,3 +11,5 @@ footer { border-top: 1px solid #ccc; color: #999; }
 .linkette { background: #eee; }
 
 .other_projects .linkette { background: #ddd; }
+
+h1, h2, h3 { color: #222; text-shadow: #999 0 0.05em 0.1em;}
