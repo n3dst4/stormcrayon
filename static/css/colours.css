@@ -12,4 +12,6 @@ footer { border-top: 1px solid #ccc; color: #999; }
 
 .other_projects .linkette { background: #ddd; }
 
-h1, h2, h3 { color: #222; text-shadow: #999 0 0.05em 0.1em;}
+h1, h2, h3, h4, h5, h6{ color: #222; text-shadow: #999 0 0.05em 0.1em;}
+
+.paper {  border: 1px solid #999; padding: 1em; background: #fbfbf3;}

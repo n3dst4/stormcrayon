@@ -25,7 +25,7 @@ div#container { max-width: 960px; margin: 0 auto; position: relative;}
 body.ie6 div#container { width: expression(calculatePageWidth()); }
 
 header { width:100%; height: 286px; position: relative;}
-header .row .column, header .row { height: 100%; position: relative; overflow: visible;}
+header .row { height: 100%; position: relative; overflow: visible;}
 .header-secondary-info { text-align: right; position: absolute; top: 1.5em; right: 10px;}
 div.left-stripe { width: 960px; height: 285px; margin: 0 auto; position: absolute; top: 0; right: 960px;}
 #i-am-neil-de-carteret {position: absolute; top: 15px; left: 0px;}
@@ -35,9 +35,6 @@ div.left-stripe { width: 960px; height: 285px; margin: 0 auto; position: absolut
 .illo-wrapper {margin: 0 1em; position: relative; width: auto; }
 .illo {width: 100%; margin: 0; padding: 0; border: none;}
 
-h3 { margin-top: 1.6em; }
-h3:first-child { margin-top: 0; }
-body.lt9 h3 { margin-top: expression(this.previousSibling==null?"0":"1.6em"); }
 
 
 

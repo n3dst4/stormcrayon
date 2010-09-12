@@ -9,6 +9,24 @@ p { line-height: 1.6em;}
 
 footer { font-size: 0.7em; }
 
-p { margin: 1.5em 0 0em 0;}
+p { margin: 0 0 1.5em 0;}
 
-h2, h3 { font-size: 2em; font-weight: normal; }
+h2, h3, h4 { font-weight: normal; }
+
+h2 { font-size: 2em; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.2em; }
+
+
+h3 { margin-top: 1.6em; }
+h3:first-child { margin-top: 0; }
+body.lt9 h3 { margin-top: expression(this.previousSibling==null?"0":"1.6em"); }
+
+h2 { margin-top: 1.2em; }
+h2:first-child { margin-top: 0; }
+body.lt9 h2 { margin-top: expression(this.previousSibling==null?"0":"1.2em"); }
+
+h4 { margin-top: 1.2em; }
+h4:first-child { margin-top: 0; }
+body.lt9 h4 { margin-top: expression(this.previousSibling==null?"0":"1.2em"); }
+
