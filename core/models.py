@@ -13,26 +13,25 @@ class FeaturedLink (models.Model):
         generate_on_save=True,
         thumbnail= {
             "size": (220, 140),
-            #"crop": ",0",
             "quality": 95,
             "options": {"crop": ",0"},
         }
     )
+    image_address = models.CharField(max_length=255, blank=True)
     category = models.CharField(max_length=255, choices=(
         ("sites", "Website I made"),
         ("other", "Other project I've done"),
     ))
+    live = models.BooleanField(null=False, default=False)
+    sequence = models.IntegerField(default=0)
     
     def save(self):
         self.description_html = markdown.markdown(self.description_markdown)
         super(FeaturedLink, self).save()
         
+    class Meta (object):
+        ordering = ("sequence", "name")
         
         
-
-"""
-I designed [Acumoxatherapy.com][acu] from scratch, implemented it in __XHTML__
-and __CSS__, and wrote the backend in __Python__.
-
-[acu]: http://www.acumoxatherapy.com
-"""
+        
+        

@@ -7,7 +7,8 @@
             <a href="{{link.address}}" target="_new">
                 <img src="{{link.image.thumbnail.absolute_url}}"
                      alt="{{link.name}}"
-                     title="{{link.name}}">
+                     title="{{link.name}}"
+                     class="thumb">
             </a>
         {% endif %}
         {{link.description_html|safe}}
@@ -29,6 +30,12 @@
                 {% usemacro linkette link %}
             {% endfor %}
         </div>
-    </row>
+    </div>
+    
+    {% for query in queries %}
+     <pre>{{query.sql}}</pre>
+    {% endfor %}
+    
+    
 {% endblock %}
 

@@ -9,20 +9,33 @@
     }
   
     $(function(){
+        
+        // PNGs
         if ($("body").is(".lt7")) {
             DD_belatedPNG.fix("img");
         }
     
+        // Email addresses
         $(".protected-email")
             .attr("href", fixProtectedEmail)
             .html(fixProtectedEmail);
       
+        // Header rollovers
         $("#super-links").delegate("a", "mouseenter", function (event) {
             $(this).find("img").attr("src", "/static/images/external_o.png");
         }).
         delegate("a", "mouseleave", function (event) {
             $(this).find("img").attr("src", "/static/images/external.png");
         });
+        
+        // fancyboxes
+        $("div.linkette a").map(function(){
+            if ($(this).attr("href").match(/\.(?:png|gif|jpg)$/)) {
+                return this;
+            } else {
+                return undefined;
+            }
+        }).fancybox();
     
     });
 })(window.jQuery);

@@ -2,7 +2,7 @@
 
 {% block styles %}
     <script type="text/javascript">
-    // this gets used in a CSS expression to IE can simulate "max-width"
+    // this gets used in a CSS expression so IE can simulate "max-width"
     function calculatePageWidth () {
         return Math.min(document.documentElement.clientWidth, 960);
     }
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/static/css/colours.css">
     <link rel="stylesheet" href="/static/css/layout.css">
     <link rel="stylesheet" media="only screen and (min-width: 601px)" href="/static/css/large.css">
+    <link rel="stylesheet" media="only screen and (min-width: 601px)" href="/static/plugins/fancybox/jquery.fancybox-1.3.1.css">
     <link rel="stylesheet" media="only screen and (max-width: 600px)" href="/static/css/small.css?v=1">
 
     <!--<script type="text/javascript" src="http://use.typekit.com/yqr3gfh.js"></script>-->
@@ -45,7 +46,25 @@
         <div class="left-stripe"><!----></div>
         <div class="row">
             <div class="column grid_4">
-                <img id="i-am-neil-de-carteret" src="/static/images/i-am-neil-de-carteret.png" alt="I am Neil de Carteret">
+                <!--<img id="i-am-neil-de-carteret" src="/static/images/i-am-neil-de-carteret.png" alt="I am Neil de Carteret">-->
+            </div>
+            <div class="name">
+                <div class="whisper">Hi. I'm</div>
+                <div class="shout"><span class="first-name">Neil</span> de Carteret...</div>
+            </div>
+            <div id="flares hidden">
+                <div class="flare">
+                    <div class="whisper">...and I'm a</div>
+                    <div class="shout">graphic designer and UI guy</div>
+                </div>
+                <div class="flare">
+                    <div class="whisper">...and I'm a</div>
+                    <div class="shout">JavaScript and front-end web developer</div>
+                </div>
+                <div class="flare">
+                    <div class="whisper">...and I'm </div>
+                    <div class="shout">kind of a Python developer too</div>
+                </div>
             </div>
             <div class="column grid_8 header-secondary-info">
                 <nav id="super-links">

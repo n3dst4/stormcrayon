@@ -30,3 +30,14 @@ h4 { margin-top: 1.2em; }
 h4:first-child { margin-top: 0; }
 body.lt9 h4 { margin-top: expression(this.previousSibling==null?"0":"1.2em"); }
 
+
+.flare, .name { font-weight: normal; font-family: 'Yanone Kaffeesatz', sans-serif;}
+
+.wf-loading .flare, .wf-loading .name { visibility: hidden; }
+.wf-yanonekaffeesatz-n4-active .flare, .wf-yanonekaffeesatz-n4-active .name,
+.wf-inactive .flare, .wf-inactive .name { visibility: visible; }
+
+
+.whisper {font-size: 20px; line-height: 15px; }
+.shout {font-size: 35px; line-height: 35px;}
+.name .shout {font-size: 45px; line-height: 45px;}
