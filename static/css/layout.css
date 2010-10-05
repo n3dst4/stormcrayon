@@ -11,6 +11,6 @@ footer { text-align: center; margin: 2em 0 4em 0;}
 .paper p { margin-left: 3em; }
 
 
-.flare { position: absolute; right: 1em; top: 147px; text-align: left; }
-.name { position: absolute; left: 1em; top: 15px; }
+.flare { position: absolute; left: 1em; top: 147px; text-align: left; }
+.name { position: absolute; left: 1em; top: 25px; }
 

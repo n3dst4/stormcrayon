@@ -27,3 +27,13 @@ h1, h2, h3, h4, h5, h6{ color: #222; text-shadow: #999 0 0.05em 0.1em;}
 .flare, .name { color: #eee; }
 .whisper {color: #bbb;}
 .first-name { color: #009ccf; }
+
+.navigational-aid { border: 1px solid white; }
+
+.navigational-aid:hover { background-color: rgba(255,255,255, 0.3);  }
+
+.main-navigation a, .main-navigation a:visited { color: white; }
+
+.rgba .main-navigation a, .rgba .main-navigation a:visited { text-decoration: none;}
+
+

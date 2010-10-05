@@ -25,7 +25,7 @@ div#container { max-width: 960px; margin: 0 auto; position: relative;}
 body.ie6 div#container { width: expression(calculatePageWidth()); }
 
 header { width:100%; height: 286px; position: relative;}
-header .row { height: 100%; position: relative; overflow: visible;}
+header .row { position: relative; overflow: visible;}
 .header-secondary-info { text-align: right; position: absolute; top: 1.5em; right: 10px;}
 div.left-stripe { width: 960px; height: 285px; margin: 0 auto; position: absolute; top: 0; right: 960px;}
 #i-am-neil-de-carteret {position: absolute; top: 15px; left: 0px;}
@@ -34,6 +34,10 @@ div.left-stripe { width: 960px; height: 285px; margin: 0 auto; position: absolut
 
 .illo-wrapper {margin: 0 1em; position: relative; width: auto; }
 .illo {width: 100%; margin: 0; padding: 0; border: none;}
+
+
+.main-navigation { position: relative; top: 150px; height: 50px;}
+.navigational-aid { height: 45px; }
 
 
 
@@ -46,6 +50,7 @@ header { background-image: url(/static/images/top.jpg); background-repeat: no-re
 div.left-stripe { background-image: url(/static/images/left.png); }
 .illo-wrapper { border: 1em solid #111; border-bottom-width: 1.8em; background: #111;
     border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; }  
+
 
 
 /*
