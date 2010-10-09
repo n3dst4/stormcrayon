@@ -1,6 +1,7 @@
 body { font-family: "DejaVu Sans", "verdana", sans-serif; font-size: 0.8em; }
 
 a { text-decoration: none; }
+a:link { text-decoration: none; }
 
 
 a:hover { text-decoration: underline; }
@@ -31,7 +32,7 @@ h4:first-child { margin-top: 0; }
 body.lt9 h4 { margin-top: expression(this.previousSibling==null?"0":"1.2em"); }
 
 
-.flare, .name, .main-navigation { font-weight: normal; font-family: 'Yanone Kaffeesatz', sans-serif; }
+h1, h2, h3, h4, h5, h6, .flare, .name, .main-navigation { font-weight: normal; font-family: 'Yanone Kaffeesatz', "Arial Narrow", sans-serif; }
 
 .wf-loading .main-navigation, .wf-loading .name { visibility: hidden; }
 .wf-yanonekaffeesatz-n4-active .main-navigation, .wf-yanonekaffeesatz-n4-active .name,
@@ -42,4 +43,4 @@ body.lt9 h4 { margin-top: expression(this.previousSibling==null?"0":"1.2em"); }
 .shout {font-size: 35px; line-height: 35px;}
 .name .shout {font-size: 45px; line-height: 45px;}
 
-.main-navigation { text-align: center; font-size: 30px; line-height: 45px; }
+.main-navigation { text-align: center; font-size: 25px; line-height: 35px; }

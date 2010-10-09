@@ -6,6 +6,7 @@
 .grid_2 { width:14.583%; } /* 140 */
 .grid_3 { width:22.917%; } /* 220 */
 .grid_4 { width:31.00%; } /* 300 */
+.ie .grid_4 { width:30.50%; } /* 300 */
 .grid_5 { width:41.667%; } /* 380 */
 .grid_6 { width:47.2%; } /* 460  Grrrr bloody exploder :( */
 .grid_7 { width:56.25%; } /* 540 */
@@ -14,7 +15,7 @@
 .grid_10 { width:81.25%; } /* 780 */
 .grid_11 { width:89.583%; } /* 860 */
 .grid_12 { width:97.917%; } /* 940 */
-.column { margin: 0 1.04%; overflow: hidden; float: left; }
+.column { margin: 0 1.0%; overflow: hidden; float: left; }
 .row { width: 97.875%; margin: 0 1.064%; overflow: hidden; }
 
 
@@ -30,14 +31,14 @@ header .row { position: relative; overflow: visible;}
 div.left-stripe { width: 960px; height: 285px; margin: 0 auto; position: absolute; top: 0; right: 960px;}
 #i-am-neil-de-carteret {position: absolute; top: 15px; left: 0px;}
 #super-links p {margin: 0;}
-.linkette { margin: 0 0 1em 0; padding: 1em;}
+.linkette { margin: 1em 0 0 0; padding: 1em;}
 
 .illo-wrapper {margin: 0 1em; position: relative; width: auto; }
 .illo {width: 100%; margin: 0; padding: 0; border: none;}
 
 
-.main-navigation { position: relative; top: 150px; height: 50px;}
-.navigational-aid { height: 45px; }
+.main-navigation { position: relative; top: 158px; height: 35px;}
+.navigational-aid { height: 35px; }
 
 
 

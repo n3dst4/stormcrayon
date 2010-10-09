@@ -27,6 +27,7 @@
 		start_pos, final_pos, busy = false, shadow = 20, fx = $.extend($('<div/>')[0], { prop: 0 }), titleh = 0, 
 
 		isIE6 = !$.support.opacity && !window.XMLHttpRequest,
+		//isIE6 = $("body").hasClass("ie6"),
 
 		/*
 		 * Private methods 
@@ -754,7 +755,9 @@
 			});
 
 			if (isIE6) {
-				overlay.get(0).style.setExpression('height',	"document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px'");
+				//overlay.get(0).style.setExpression('height',	"document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px'");
+				overlay.css("position", "absolute");
+				overlay.get(0).style.setExpression('height',	"Math.max(document.body.scrollHeight, document.body.offsetHeight) + 'px'");
 				loading.get(0).style.setExpression('top',		"(-20 + (document.documentElement.clientHeight ? document.documentElement.clientHeight/2 : document.body.clientHeight/2 ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop )) + 'px'");
 
 				outer.prepend('<iframe id="fancybox-hide-sel-frame" src="javascript:\'\';" scrolling="no" frameborder="0" ></iframe>');

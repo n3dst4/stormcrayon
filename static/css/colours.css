@@ -28,12 +28,23 @@ h1, h2, h3, h4, h5, h6{ color: #222; text-shadow: #999 0 0.05em 0.1em;}
 .whisper {color: #bbb;}
 .first-name { color: #009ccf; }
 
-.navigational-aid { border: 1px solid white; }
+.rgba .navigational-aid { qborder: 1px solid rgba(255,255,255, 0.3); background-color: rgba(255,255,255, 0.1); }
+.no-rgba .ie .main-navigation a {
+    background: transparent none;
+    filter:progid:DXImageTransform.Microsoft.gradient(GradientType=1, startColorstr=#19ffffff,endColorstr=#19ffffff);
+    zoom: 1;
+}
 
-.navigational-aid:hover { background-color: rgba(255,255,255, 0.3);  }
+.rgba .navigational-aid:hover { background-color: rgba(255,255,255, 0.3);  }
+.no-rgba .ie .main-navigation a { display: block; }
+.no-rgba .ie .main-navigation a:hover {
+    background: transparent none;
+    filter:progid:DXImageTransform.Microsoft.gradient(GradientType=1, startColorstr=#55ffffff,endColorstr=#55ffffff);
+    zoom: 1;
+}
 
-.main-navigation a, .main-navigation a:visited { color: white; }
+.main-navigation a, .main-navigation a:visited { color: white; text-decoration: none; }
 
-.rgba .main-navigation a, .rgba .main-navigation a:visited { text-decoration: none;}
+.rgba .main-navigation a, .rgba .main-navigation a:visited { }
 
 

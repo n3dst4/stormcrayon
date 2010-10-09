@@ -10,6 +10,7 @@
         }
     }
     
+    
     var i, link, allLinks, links, grodyQuery,
         html = document.getElementsByTagName("html")[0],
         htmlBg = getStyle(html, "background-color") ||

@@ -30,15 +30,9 @@
         
         // fancyboxes
         $("div.linkette a").map(function(){
-            if ($(this).attr("href").match(/\.(?:png|gif|jpg)$/)) {
-                return this;
-            } else {
-                return undefined;
-            }
+            return $(this).attr("href").match(/\.(?:png|gif|jpg)$/)?
+                this : undefined;
         }).fancybox();
-        
-        
-        
     
     });
 })(window.jQuery);
