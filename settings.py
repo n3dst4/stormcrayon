@@ -9,6 +9,8 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+INTERNAL_IPS = ('127.0.0.1', '10.0.0.129')
+
 DATABASES = {
     #'default': {
     #    'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
@@ -23,7 +25,7 @@ DATABASES = {
         'NAME': 'stormcrayon',
         'USER': 'stormcrayon',
         'PASSWORD': 'stormcrayon', 
-        'HOST': '10.0.0.5',        # ""==localhost, but pg localhost connections don't use password auth
+        'HOST': '10.0.0.9',        # ""==localhost, but pg localhost connections don't use password auth
         'PORT': '',                # ""==default
     }
 }
@@ -53,7 +55,7 @@ USE_L10N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = '/home/ndc/webapps/stormcrayon/stormcrayon/static/'
+MEDIA_ROOT = '/home/ndc/projects/stormcrayon/stormcrayon/static/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
@@ -81,6 +83,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
 ROOT_URLCONF = 'stormcrayon.urls'
@@ -89,7 +92,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    "/home/ndc/webapps/stormcrayon/stormcrayon/templates",
+    "/home/ndc/projects/stormcrayon/stormcrayon/templates",
 )
 
 INSTALLED_APPS = (
@@ -100,5 +103,21 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.admin',
     'south',
+    'django_extensions',
+    'debug_toolbar',
     'stormcrayon.core',
+    
+)
+
+
+DEBUG_TOOLBAR_PANELS = (
+    'debug_toolbar.panels.version.VersionDebugPanel',
+    'debug_toolbar.panels.timer.TimerDebugPanel',
+    'debug_toolbar.panels.settings_vars.SettingsVarsDebugPanel',
+    'debug_toolbar.panels.headers.HeaderDebugPanel',
+    'debug_toolbar.panels.request_vars.RequestVarsDebugPanel',
+    'debug_toolbar.panels.template.TemplateDebugPanel',
+    'debug_toolbar.panels.sql.SQLDebugPanel',
+    'debug_toolbar.panels.signals.SignalDebugPanel',
+    'debug_toolbar.panels.logger.LoggingPanel',
 )
