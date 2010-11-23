@@ -9,11 +9,9 @@
     }
     </script>
 
-    <link rel="stylesheet" href="/static/css/fonts.css">
-    <link rel="stylesheet" href="/static/css/colours.css">
-    <link rel="stylesheet" href="/static/css/layout.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
     <link rel="stylesheet" media="only screen and (min-width: 601px)" href="/static/css/large.css">
-    <!--<link rel="stylesheet" media="only screen and (min-width: 601px)" href="/static/plugins/fancybox/jquery.fancybox-1.3.1.css">-->
+    <link rel="stylesheet" media="only screen and (min-width: 601px)" href="/static/plugins/fancybox/jquery.fancybox-1.3.1.css">
     <link rel="stylesheet" media="only screen and (max-width: 600px)" href="/static/css/small.css?v=1">
 
     <!-- Grodyquery: first we make the html background red, then use a CSS
@@ -40,87 +38,6 @@
 
 
 {% block header %}
-    <header>
-        <div class="left-stripe"><!----></div>
-        <div class="row">
-            <div class="column grid_4">
-                <!--<img id="i-am-neil-de-carteret" src="/static/images/i-am-neil-de-carteret.png" alt="I am Neil de Carteret">-->
-            </div>
-            <div class="name column grid_4">
-                <!--<div class="whisper">Hi. I'm</div>-->
-                <div class="shout"><span class="first-name">Neil</span> de Carteret</div>
-            </div>
-            <!--<div id="flares">-->
-                <!--<div class="flare">-->
-                <!--    <div class="whisper">is a</div>-->
-                <!--    <div class="shout">JavaScript/web front-end developer and graphic designer</div>-->
-                <!--</div>-->
-                <!--<div class="flare">-->
-                <!--    <div class="whisper">...and I'm a</div>-->
-                <!--    <div class="shout">JavaScript and front-end web developer</div>-->
-                <!--</div>-->
-                <!--<div class="flare">-->
-                <!--    <div class="whisper">...and I'm a</div>-->
-                <!--    <div class="shout">graphic designer and UI guy</div>-->
-                <!--</div>-->
-                <!--<div class="flare">-->
-                <!--    <div class="whisper">...and I'm </div>-->
-                <!--    <div class="shout">also a Python developer</div>-->
-                <!--</div>-->
-                <!--<div class="flare">-->
-                <!--    <div class="whisper">...and I </div>-->
-                <!--    <div class="shout">like bright colours, obviously</div>-->
-                <!--</div>-->
-                <!--<div class="flare">-->
-                <!--    <div class="whisper">...and I'm </div>-->
-                <!--    <div class="shout">available with reasonable notice</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <div class="column grid_8 header-secondary-info">
-                <nav id="super-links">
-                    <!--<p>-->
-                    <!--    Read&nbsp;-->
-                    <!--    <a href="{% url stormcrayon.core.views.portfolio %}">examples of my work</a>,&nbsp;-->
-                    <!--    <a href="{% url about %}">about me</a>,&nbsp;&nbsp;or&nbsp;&nbsp;-->
-                    <!--    <a href="{% url resume %}">my resum&eacute;</a>-->
-                    <!--</p>-->
-                    <p>
-                        I'm also on
-                        <a href="http://blog.lumphammer.com" target="_new">
-                            Posterous
-                            <img src="/static/images/external.png" alt="(external link)"/></a>,
-                        <a href="http://github.com/n3dst4" class="external" target="_new">
-                            GitHub
-                            <img src="/static/images/external.png" alt="(external link)"/></a>, and 
-                        <a href="http://uk.linkedin.com/in/neildecarteret" target="_new">
-                            LinkedIn
-                            <img src="/static/images/external.png" alt="(external link)"/></a>
-                        <!-- Technically I'm on Facebook too, but I never use it. -->
-                    </p>
-                    <p>
-                        Email me on <a class="protected-email" href="mailto:neil [at] neildecarteret.com">neil [at] neildecarteret.com</a>
-                    </p>
-                </nav>
-            </div>
-        </div>
-        <div class="row main-navigation">
-            <div class="column grid_4">
-                <a href="{% url stormcrayon.core.views.portfolio %}">
-                    <div class="navigational-aid">Portfolio</div>
-                </a>
-            </div>
-            <div class="column grid_4">
-                <a href="{% url about %}">
-                    <div class="navigational-aid">About Me</div>
-                </a>
-            </div>
-            <div class="column grid_4">
-                <a href="{% url resume %}">
-                    <div class="navigational-aid">Resum&eacute;</div>
-                </a>
-            </div>
-        </div>
-    </header>
 {% endblock %}
 
 {% block main %}Stormcrayon main{% endblock %}
@@ -136,7 +53,7 @@ This site is <a href="http://validator.w3.org/check?uri=referer">HTML5ish</a>.
 {% endblock %}
 
 {% block scripts %}
-    <script type="text/javascript" src="/static/js/grodyquery-part-two.js?v=1"></script>
+    <!--<script type="text/javascript" src="/static/js/grodyquery-part-two.js?v=1"></script>-->
 {% endblock %}
 
 

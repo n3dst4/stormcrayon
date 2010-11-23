@@ -12,7 +12,7 @@ class FeaturedLink (models.Model):
         blank=True,
         generate_on_save=True,
         thumbnail= {
-            "size": (220, 140),
+            "size": (380, 260),
             "quality": 95,
             "options": {"crop": ",0"},
         }

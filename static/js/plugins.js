@@ -12,7 +12,7 @@
         
         // PNGs
         if ($("body").is(".lt7")) {
-            DD_belatedPNG.fix("img");
+            DD_belatedPNG.fix("img, body");
         }
     
         // Email addresses

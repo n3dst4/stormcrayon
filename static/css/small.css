@@ -1,8 +1,0 @@
-div#container { width:100%; }
-header { text-align: center; height: 169px; }
-#i-am-neil-de-carteret {position: static; margin: 0 auto; }
-#super-links {top: 55px; left: 10px;}
-#super-links ul {padding: 0; margin: 0;}
-#super-links li {padding: 0 1em 0 0;}
-
-header { background-image: url(/static/images/lite-top.jpg); }

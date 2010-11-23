@@ -2,76 +2,98 @@
  * grid system
  * see http://www.usabilitypost.com/2009/06/19/the-1kb-css-grid-part-3/
  */
+/* ================ */
+/* = The 1Kb Grid = */     /* 12 columns, 60 pixels each, with 20 pixel gutter */
+/* ================ */
+
 .grid_1 { width:6.25%; } /* 60 */
 .grid_2 { width:14.583%; } /* 140 */
 .grid_3 { width:22.917%; } /* 220 */
 .grid_4 { width:31.00%; } /* 300 */
 .ie .grid_4 { width:30.50%; } /* 300 */
-.grid_5 { width:41.667%; } /* 380 */
+.grid_5 { width:39.583%; } /* 380 */
+.ie .grid_5 { width:38%; } /* 380 */
 .grid_6 { width:47.2%; } /* 460  Grrrr bloody exploder :( */
 .grid_7 { width:56.25%; } /* 540 */
+.ie .grid_7 { width:56%; } /* 540 */
 .grid_8 { width:63.00%; } /* 620 */
 .grid_9 { width:72.917%; } /* 700 */
 .grid_10 { width:81.25%; } /* 780 */
 .grid_11 { width:89.583%; } /* 860 */
 .grid_12 { width:97.917%; } /* 940 */
-.column { margin: 0 1.0%; overflow: hidden; float: left; }
-.row { width: 97.875%; margin: 0 1.064%; overflow: hidden; }
+.column { margin: 0 1%; overflow: hidden; float: left; }
+.row { width: 97.959%; margin: 0 1.064%; overflow: hidden; }
+
+/* ================ */
+/* = The 1Kb Grid = */     /* 12 columns, 60 pixels each, with 20 pixel gutter */
+/* ================ */
+
+/*
+.grid_1 { width:60px; }
+.grid_2 { width:140px; }
+.grid_3 { width:220px; }
+.grid_4 { width:300px; }
+.grid_5 { width:380px; }
+.grid_6 { width:460px; }
+.grid_7 { width:540px; }
+.grid_8 { width:620px; }
+.grid_9 { width:700px; }
+.grid_10 { width:780px; }
+.grid_11 { width:860px; }
+.grid_12 { width:940px; }
+
+.column {
+	margin: 0 10px;
+	overflow: hidden;
+	float: left;
+	display: inline;
+}
+.row {
+	width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.row .row {
+	margin: 0 -10px;
+	width: auto;
+	display: inline-block;
+}
+*/
 
 
 /*
  * layout
  */
-div#container { max-width: 960px; margin: 0 auto; position: relative;}
-body.ie6 div#container { width: expression(calculatePageWidth()); }
+div#container { max-width: 980px; min-width: 630px; margin: 0 auto; }
+body.ie6 div#container { width: expression(Math.max(Math.min(document.documentElement.clientWidth, 980), 630)); }
 
-header { width:100%; height: 286px; position: relative;}
-header .row { position: relative; overflow: visible;}
-.header-secondary-info { text-align: right; position: absolute; top: 1.5em; right: 10px;}
-div.left-stripe { width: 960px; height: 285px; margin: 0 auto; position: absolute; top: 0; right: 960px;}
-#i-am-neil-de-carteret {position: absolute; top: 15px; left: 0px;}
-#super-links p {margin: 0;}
-.linkette { margin: 1em 0 0 0; padding: 1em;}
+.module { margin-bottom: 2em;  }
 
-.illo-wrapper {margin: 0 1em; position: relative; width: auto; }
-.illo {width: 100%; margin: 0; padding: 0; border: none;}
+img.thumb { display: block; float: left;  margin-right: 2%; width: 40.425%; border-right: 1px solid #252525; }
+.ie6 img.thumb {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/image.gif", sizingMethod="scale");}
+.ie7 img.thumb { -ms-interpolation-mode: bicubic; }
 
-
-.main-navigation { position: relative; top: 158px; height: 35px;}
-.navigational-aid { height: 35px; }
-
-
+.module .text { padding-right: 2%;}
 
 
 /*
  * colours and backgrounds
  */
-body { background-image: url(/static/images/right.png); background-repeat: repeat-x; }
-header { background-image: url(/static/images/top.jpg); background-repeat: no-repeat;}
-div.left-stripe { background-image: url(/static/images/left.png); }
-.illo-wrapper { border: 1em solid #111; border-bottom-width: 1.8em; background: #111;
-    border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; }  
 
+.module { background: white none;; }
+h3 { color: white; background-color: #252525; padding: 0.1em 0;}
+
+/*div#container { background-color: #1d2a5a; }
+div.row {background-color: #151f43; }
+div.column {background-color: #344ca3; }*/
 
 
 /*
  * fonts
  */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+h3 { font-family: 'Yanone Kaffeesatz'; font-size: 2.4em; font-weight: normal;  }
 
 
 
