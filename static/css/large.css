@@ -77,12 +77,45 @@ img.thumb { display: block; float: left;  margin-right: 2%; width: 40.425%; bord
 .module .text { padding-right: 2%;}
 
 
+header { height: 180px; position: relative; margin: 0 2%; }
+
+.nav-block {position: absolute; top: 66px; height: 52px; width:31.00%; }
+.nav-block-left {left: 0;}
+.nav-block-right {right:0;}
+
+.logo { margin: 0 auto; width: 100%; position: absolute; top: 66px; left: 0px;}
+
+.logo img { width: 31.987%; display: block; margin: 0 auto; position: relative;  }
+
+.aura { margin-left: -200px ; width: 395px; height: 290px; position: absolute; top: -100px; left: 50%; z-index: 1;} 
+
 /*
  * colours and backgrounds
  */
 
 .module { background: white none;; }
 h3 { color: white; background-color: #252525; padding: 0.1em 0;}
+.nav-block { background-image: url(/static/images/nav-block.png); }
+.nav-block-left  { background-position: left middle; }
+.nav-block-right { background-position: right center; }
+
+.nav-block:after  { position: absolute; width: 6px; height: 52px; top: 0; 
+    background-image: url(/static/images/nav-block.png);
+    content: "";
+    }
+
+.nav-block-left:after  { right: -6px; background-position: right center; }
+.nav-block-right:after  { left: -6px; background-position: left center; }
+
+.module {     box-shadow: 0 3px 6px #222;
+    -moz-box-shadow: 0 3px 6px #222;
+    -webkit-box-shadow: 0 3px 6px #222;
+ }
+ 
+ .aura { background-image: url(/static/images/aura.png); } 
+
+
+
 
 /*div#container { background-color: #1d2a5a; }
 div.row {background-color: #151f43; }

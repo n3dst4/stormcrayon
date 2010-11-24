@@ -21,12 +21,10 @@
 {% endmacro %}
 
 {% block main %}
-    <h2>Websites I've made</h2>
     {% for link in sites %}
         {% usemacro linkette link %}
     {% endfor %}
     
-    <h2>Other projects</h2>
     {% for link in other %}
         {% usemacro linkette link %}
     {% endfor %}   
