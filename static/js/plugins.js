@@ -1,16 +1,27 @@
 
 
 (function($){
-    var fakeAtSign = / \[at\] /,
+    var kaboom,
+        fakeAtSign = / \[at\] /,
         realAtSign = "@";
   
     function fixProtectedEmail (index, oldValue) {
         return oldValue.replace(fakeAtSign, realAtSign);
     }
+    
+    function alignKaboom() {
+        var activeA = $(".kaboom"),
+            target = activeA.offset();
+        kaboom.offset({
+            top: target.top - kaboom.height()/2 + activeA.height()/2,
+            left: target.left - kaboom.width()/2 + activeA.width()/2
+        });        
+    }
   
     $(function(){
         
         // PNGs
+        // using twinhelix iepngfix for now
         //if ($("body").is(".lt7")) {
         //    DD_belatedPNG.fix("img, div.nav-block, div.aura");
         //}
@@ -33,6 +44,13 @@
             return $(this).attr("href").match(/\.(?:png|gif|jpg)$/)?
                 this : undefined;
         }).fancybox();
+        
+        // align kaboom graphic with selected nav item
+        kaboom = $("#kaboom");
+        alignKaboom();
+        kaboom.css("visibility", "visible");
+        $(window).resize(alignKaboom);
+        
     
     });
 })(window.jQuery);

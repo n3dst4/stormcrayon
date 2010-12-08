@@ -12,6 +12,7 @@ def portfolio(request):
         'sites': site_links,
         'other': other_links,
         'queries': connection.queries,
+        "nav_active": "portfolio"
     })
     
     

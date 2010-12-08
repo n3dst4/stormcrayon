@@ -64,7 +64,9 @@
 /*
  * layout
  */
-div#container { max-width: 980px; min-width: 630px; margin: 0 auto; }
+html { overflow-x: hidden; }
+div#container { max-width: 980px; min-width: 630px; margin: 0 auto;  }
+div#main {position: relative; z-index: 200;}
 body.ie6 div#container { width: expression(Math.max(Math.min(document.documentElement.clientWidth, 980), 630)); }
 
 .module { margin-bottom: 2em;  }
@@ -77,7 +79,7 @@ img.thumb { display: block; float: left;  margin-right: 2%; width: 40.425%; bord
 .module .text { padding-right: 2%;}
 
 
-header { height: 180px; position: relative; margin: 0 2%; }
+header { height: 180px; position: relative; margin: 0 2%; z-index: 100; }
 
 .nav-block {position: absolute; top: 66px; height: 52px; width:31.00%; }
 .nav-block-left {left: 0; }
@@ -90,9 +92,11 @@ header { height: 180px; position: relative; margin: 0 2%; }
 
 .logo img { width: 31.987%; display: block; margin: -20px auto 0; position: relative; height: 89px; }
 
-.lt7 .logo img {   }
-
 .aura { margin-left: -300px ; width: 600px; height: 290px; position: absolute; top: -75px; left: 50%; z-index: 0;}
+
+#kaboom { width: 300px; height: 300px; position: absolute; top: 0; left:0; z-index: 1; visibility: hidden;}
+
+.no-js #kaboom { display: none; }
 
 /*
  * colours and backgrounds
@@ -123,6 +127,12 @@ h3 { color: white; background-color: #252525; padding: 0.1em 0;}
 
 .nav-block a, .nav-block a:link, .nav-block a:visited { color: #ccc; text-decoration: none;}
 .nav-block a:hover { color: white; text-decoration: underline; }
+
+a.kaboom:link, a.kaboom:visited, a.kaboom:link { color: white;
+    text-shadow: 0 0px 14px white;
+    -moz-text-shadow: 0 0px 14px white;
+    -webkit-text-shadow: 0 0px 14px white;
+}
 
 
 /*div#container { background-color: #1d2a5a; }
