@@ -85,9 +85,11 @@ header { height: 180px; position: relative; margin: 0 2%; }
 
 .logo { margin: 0 auto; width: 100%; position: absolute; top: 66px; left: 0px;}
 
-.logo img { width: 31.987%; display: block; margin: 0 auto; position: relative;  }
+.logo img { width: 31.987%; display: block; margin: -20px auto 0; position: relative; height: 89px; }
 
-.aura { margin-left: -200px ; width: 395px; height: 290px; position: absolute; top: -100px; left: 50%; z-index: 1;} 
+.lt7 .logo img {   }
+
+.aura { margin-left: -300px ; width: 600px; height: 290px; position: absolute; top: -75px; left: 50%; z-index: 0;} 
 
 /*
  * colours and backgrounds
@@ -112,9 +114,9 @@ h3 { color: white; background-color: #252525; padding: 0.1em 0;}
     -webkit-box-shadow: 0 3px 6px #222;
  }
  
- .aura { background-image: url(/static/images/aura.png); } 
+ .aura {  } 
 
-
+.lt7 img, .lt7 div.nav-block  { behavior: url(/static/plugins/iepngfix/iepngfix.htc) }
 
 
 /*div#container { background-color: #1d2a5a; }

@@ -11,9 +11,9 @@
     $(function(){
         
         // PNGs
-        if ($("body").is(".lt7")) {
-            DD_belatedPNG.fix("img, div.nav-block, div.aura");
-        }
+        //if ($("body").is(".lt7")) {
+        //    DD_belatedPNG.fix("img, div.nav-block, div.aura");
+        //}
     
         // Email addresses
         $(".protected-email")
