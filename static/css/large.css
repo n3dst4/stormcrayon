@@ -80,8 +80,11 @@ img.thumb { display: block; float: left;  margin-right: 2%; width: 40.425%; bord
 header { height: 180px; position: relative; margin: 0 2%; }
 
 .nav-block {position: absolute; top: 66px; height: 52px; width:31.00%; }
-.nav-block-left {left: 0;}
+.nav-block-left {left: 0; }
 .nav-block-right {right:0;}
+.nav-block ul { margin: 0; padding: 0; height: 100%; width: 100% }
+.nav-block li { display: block; float: left; margin: 10px 0 0 0; width: 49%; text-align: center;}
+
 
 .logo { margin: 0 auto; width: 100%; position: absolute; top: 66px; left: 0px;}
 
@@ -89,7 +92,7 @@ header { height: 180px; position: relative; margin: 0 2%; }
 
 .lt7 .logo img {   }
 
-.aura { margin-left: -300px ; width: 600px; height: 290px; position: absolute; top: -75px; left: 50%; z-index: 0;} 
+.aura { margin-left: -300px ; width: 600px; height: 290px; position: absolute; top: -75px; left: 50%; z-index: 0;}
 
 /*
  * colours and backgrounds
@@ -97,17 +100,17 @@ header { height: 180px; position: relative; margin: 0 2%; }
 
 .module { background: white none;; }
 h3 { color: white; background-color: #252525; padding: 0.1em 0;}
-.nav-block { background-image: url(/static/images/nav-block.png); }
-.nav-block-left  { background-position: left middle; }
-.nav-block-right { background-position: right center; }
+.nav-block ul { background-image: url(/static/images/nav-block.png); color: #ddd;}
+.nav-block-left ul { background-position: left middle; }
+.nav-block-right ul { background-position: right center; }
 
-.nav-block:after  { position: absolute; width: 6px; height: 52px; top: 0; 
+.nav-block ul:after  { position: absolute; width: 6px; height: 52px; top: 0; 
     background-image: url(/static/images/nav-block.png);
     content: "";
     }
 
-.nav-block-left:after  { right: -6px; background-position: right center; }
-.nav-block-right:after  { left: -6px; background-position: left center; }
+.nav-block-left ul:after  { right: -6px; background-position: right center; }
+.nav-block-right ul:after  { left: -6px; background-position: left center; }
 
 .module {     box-shadow: 0 3px 6px #222;
     -moz-box-shadow: 0 3px 6px #222;
@@ -116,7 +119,10 @@ h3 { color: white; background-color: #252525; padding: 0.1em 0;}
  
  .aura {  } 
 
-.lt7 img, .lt7 div.nav-block  { behavior: url(/static/plugins/iepngfix/iepngfix.htc) }
+.lt7 img, .lt7 div.nav-block ul  { behavior: url(/static/plugins/iepngfix/iepngfix.htc) }
+
+.nav-block a, .nav-block a:link, .nav-block a:visited { color: #ccc; text-decoration: none;}
+.nav-block a:hover { color: white; text-decoration: underline; }
 
 
 /*div#container { background-color: #1d2a5a; }
@@ -129,6 +135,7 @@ div.column {background-color: #344ca3; }*/
  */
 
 h3 { font-family: 'Yanone Kaffeesatz'; font-size: 2.4em; font-weight: normal;  }
+.nav-block { font-family: 'Yanone Kaffeesatz'; font-size: 1.7em; font-weight: normal;   }
 
 
 
