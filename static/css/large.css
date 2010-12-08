@@ -71,13 +71,14 @@ body.ie6 div#container { width: expression(Math.max(Math.min(document.documentEl
 
 .module { margin-bottom: 2em;  }
 
-img.thumb { display: block; float: left;  margin-right: 2%; width: 40.425%; border-right: 1px solid #252525; }
+img.thumb { display: block; float: left;  margin-right: 2%; width: 40.425%;
+    margin-bottom: -1px;
+    border-right: 1px solid #252525; border-bottom: 1px solid #252525; }
 .ie6 img.thumb {
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/image.gif", sizingMethod="scale");}
 .ie7 img.thumb { -ms-interpolation-mode: bicubic; }
 
-.module .text { padding-right: 2%;}
-
+.module .text { padding-right: 2%; float: right; width: 55%;}
 
 header { height: 180px; position: relative; margin: 0 2%; z-index: 100; }
 
