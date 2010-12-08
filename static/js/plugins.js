@@ -12,10 +12,10 @@
     function alignKaboom() {
         var activeA = $(".kaboom"),
             target = activeA.offset();
-        kaboom.offset({
+        kaboom.css({
             top: target.top - kaboom.height()/2 + activeA.height()/2,
             left: target.left - kaboom.width()/2 + activeA.width()/2
-        });        
+        });
     }
   
     $(function(){
