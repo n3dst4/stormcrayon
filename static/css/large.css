@@ -101,6 +101,8 @@ header { height: 180px; position: relative; margin: 0 2%; z-index: 100; }
 
 .no-js #kaboom { display: none; }
 
+footer { text-align: center; margin: 1em 0;}
+
 /*
  * colours and backgrounds
  */
@@ -137,6 +139,7 @@ a.kaboom:link, a.kaboom:visited, a.kaboom:link { color: white;
     -webkit-text-shadow: 0 0px 14px white;
 }
 
+footer { color: #bbb;  }
 
 /*div#container { background-color: #1d2a5a; }
 div.row {background-color: #151f43; }
