@@ -78,7 +78,9 @@ img.thumb { display: block; float: left;  margin-right: 2%; width: 40.425%;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/image.gif", sizingMethod="scale");}
 .ie7 img.thumb { -ms-interpolation-mode: bicubic; }
 
-.module .text { padding-right: 2%; float: right; width: 55%;}
+.module .text { padding-right: 2%; float: right; width: 55%; margin-top: 1em;}
+
+p { margin-bottom: 0.6em; }
 
 header { height: 180px; position: relative; margin: 0 2%; z-index: 100; }
 
