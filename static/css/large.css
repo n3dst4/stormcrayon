@@ -83,16 +83,20 @@ img.thumb { display: block; float: left;  margin-right: 2%; width: 40.425%;
 
 p { margin-bottom: 0.6em; }
 
-header { height: 180px; position: relative; margin: 0 2%; z-index: 100; }
+header { height: 16em; position: relative; margin: 0 2%; z-index: 100; padding: 0 0 0 0;}
 
-.nav-block {position: absolute; top: 66px; height: 52px; width:31.00%; }
+.nav-block {position: absolute; top: 7em; height: 52px; width:31.00%; }
 .nav-block-left {left: 0; }
 .nav-block-right {right:0;}
 .nav-block ul { margin: 0; padding: 0; height: 100%; width: 100% }
 .nav-block li { display: block; float: left; margin: 10px 0 0 0; width: 49%; text-align: center;}
 
+.misc-nav { height: 1.8em; padding-top: 0.2em; qposition: relative; qtop: -2em;}
+.misc-nav .also-on , .misc-nav .email-me{ position: relative; z-index: 3;}
+.misc-nav .also-on { float: right; }
+.misc-nav .email-me{ float: left; }
 
-.logo { margin: 0 auto; width: 100%; position: absolute; top: 66px; left: 0px;}
+.logo { margin: 0 auto; width: 100%; position: absolute; top:  7em; left: 0px;}
 
 .logo img { width: 31.987%; display: block; margin: -20px auto 0; position: relative; height: 89px; }
 
@@ -116,7 +120,13 @@ footer { text-align: center; margin: 1em 0;}
 
 .module { background: white none;; }
 .module h3 { color: white; background-color: #252525; padding: 0.1em 0;}
-.nav-block ul { background-image: url(/static/images/nav-block.png); color: #ddd;}
+.nav-block ul{ background-image: url(/static/images/nav-block.png); color: #ddd;}
+
+.misc-nav { background-image: url(/static/images/nav-block.png); color: #999;}
+.misc-nav { background-position: left bottom; }
+.misc-nav a, .misc-nav a:link, .misc-nav a:visited { color: #8599ae; } 
+.misc-nav a:hover { color: #bac6d1; } 
+
 .nav-block-left ul { background-position: left middle; }
 .nav-block-right ul { background-position: right center; }
 
@@ -135,7 +145,8 @@ footer { text-align: center; margin: 1em 0;}
  
  .aura {  } 
 
-.lt7 img, .lt7 div.nav-block ul  { behavior: url(/static/plugins/iepngfix/iepngfix.htc) }
+.lt7 img, .lt7 div.nav-block ul, .lt7 div.misc-nav  { behavior: url(/static/plugins/iepngfix/iepngfix.htc) }
+
 
 .nav-block a, .nav-block a:link, .nav-block a:visited { color: #ccc; text-decoration: none;}
 .nav-block a:hover { color: white; text-decoration: underline; }
@@ -163,7 +174,7 @@ h1, h2, h3, h3, h4  { font-family: 'Yanone Kaffeesatz'; font-weight: normal;  }
 h2 { font-size: 3em;  }
 h3 { font-size: 2.4em;  }
 h4 { font-size: 1.4em;  }
-.nav-block { font-family: 'Yanone Kaffeesatz'; font-size: 1.7em; font-weight: normal;   }
+.nav-block .nav-link { font-family: 'Yanone Kaffeesatz'; font-size: 1.7em; font-weight: normal;   }
 p {line-height: 1.5em;}
 
 

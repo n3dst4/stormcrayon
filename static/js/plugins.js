@@ -13,13 +13,12 @@
         var activeA = $(".kaboom"),
             target = activeA.offset();
         kaboom.css({
-            top: target.top - kaboom.height()/2 + activeA.height()/2,
+            top: target.top - kaboom.height()/2 + activeA.height()/2 + 5,
             left: target.left - kaboom.width()/2 + activeA.width()/2
         });
     }
   
     $(function(){
-        
         // PNGs
         // using twinhelix iepngfix for now
         //if ($("body").is(".lt7")) {
@@ -50,8 +49,6 @@
         alignKaboom();
         kaboom.css("visibility", "visible");
         $(window).resize(alignKaboom);
-        
-    
     });
 })(window.jQuery);
 
