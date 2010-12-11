@@ -6,12 +6,68 @@
 <div class="row">
     <div class="column grid_8">
         <div class="chatter">
-            Email
+            <h2>Get in touch</h2>
+            
+            <form method="post" class="contact">
+                {% csrf_token %}
+                {% for error in form.non_field_errors %}
+                    <div class="error">{{error}}</div>
+                {% endfor %}
+
+                <table>
+                    <tr>
+                        <th>
+                            Your email address
+                        </th>
+                        <td>
+                            <input class="text" name="{{form.sender.html_name}}">
+                            {% for error in form.sender.errors %}
+                                <div class="error">{{error}}</div>
+                            {% endfor %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            What you're interested in
+                        </th>
+                        <td>
+                            {{form.interest_web_design.label_tag}}
+                            {{form.interest_web_design}}
+                            &nbsp;&nbsp;
+                            {{form.interest_other_development.label_tag}}
+                            {{form.interest_other_development}}
+                            &nbsp;&nbsp;
+                            {{form.interest_graphic_design.label_tag}}
+                            {{form.interest_graphic_design}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Message
+                            <div class="annotation">
+                                Optional - leave this blank and I'll know you'd
+                                just like me to get in touch
+                            </div>
+                        </th>
+                        <td>
+                            {{form.message}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                            <input type="submit" value="Send" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            
         </div>
     </div>
     <div class="column grid_4">
         <div class="chatter">
-            <p>Direct contact
+            <h3>Other ways to contact me</h3>
         </div>
     </div>
 </div>

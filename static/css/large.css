@@ -1,10 +1,7 @@
-/*
+/*******************************************************************************
  * grid system
  * see http://www.usabilitypost.com/2009/06/19/the-1kb-css-grid-part-3/
  */
-/* ================ */
-/* = The 1Kb Grid = */     /* 12 columns, 60 pixels each, with 20 pixel gutter */
-/* ================ */
 
 .grid_1 { width:6.25%; } /* 60 */
 .grid_2 { width:14.583%; } /* 140 */
@@ -25,9 +22,7 @@
 .column { margin: 0 1%; overflow: visible; float: left; }
 .row { width: 97.959%; margin: 0 1.064%; overflow: hidden; }
 
-/* ================ */
-/* = The 1Kb Grid = */     /* 12 columns, 60 pixels each, with 20 pixel gutter */
-/* ================ */
+/* Original */
 
 /*
 .grid_1 { width:60px; }
@@ -62,7 +57,8 @@
 */
 
 
-/*
+
+/*******************************************************************************
  * layout
  */
 html { overflow-x: hidden; }
@@ -110,22 +106,38 @@ footer { text-align: center; margin: 1em 0;}
 
 .chatter { padding: 1em; margin-bottom: 1em;}
 
-.illo-wrapper { padding: 1em 1em 2em; text-align: center; overflow: hidden; }
+.illo-wrapper { padding: 1em 1em 2em; text-align: center; overflow: hidden; margin-bottom: 1em;}
+    
+.csstransforms .illo-wrapper { margin: 1em 0 2em;
+    transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    /* crappily, webkit doesn't antialias the edges of rotated images so they
+      look hugely ugly https://bugs.webkit.org/show_bug.cgi?id=39753 */
+    -webkit-transform: rotate(2deg);
+    }
 
 .illo-inner img { width: 100%; }
 
-/*
+form.contact table { width: 100%; table-layout: fixed; }
+form.contact table th { width: 10em; text-align: left; padding: 0 0 1em 0;}
+form.contact table td { vertical-align: middle; }
+form.contact table input.text, form.contact table textarea { width: 95%; }
+
+
+
+
+/*******************************************************************************
  * colours and backgrounds
  */
-
 .module { background: white none;; }
 .module h3 { color: white; background-color: #252525; padding: 0.1em 0;}
 .nav-block ul{ background-image: url(/static/images/nav-block.png); color: #ddd;}
 
 .misc-nav { background-image: url(/static/images/nav-block.png); color: #999;}
 .misc-nav { background-position: left bottom; }
-.misc-nav a, .misc-nav a:link, .misc-nav a:visited { color: #8599ae; } 
-.misc-nav a:hover { color: #bac6d1; } 
+.misc-nav a, .misc-nav a:link, .misc-nav a:visited,
+footer a, footer a:link, footer a:visited { color: #8599ae; } 
+.misc-nav a:hover, footer a:hover { color: #bac6d1; } 
 
 .nav-block-left ul { background-position: left middle; }
 .nav-block-right ul { background-position: right center; }
@@ -161,22 +173,25 @@ footer { color: #bbb;  }
 
 .chatter,.illo-wrapper { background: white; }
 
+th .annotation { color: #666;}
+
+
 /*div#container { background-color: #1d2a5a; }
 div.row {background-color: #151f43; }
 div.column {background-color: #344ca3; }*/
 
 
-/*
+
+/*******************************************************************************
  * fonts
  */
-
-h1, h2, h3, h3, h4  { font-family: 'Yanone Kaffeesatz'; font-weight: normal;  }
+h1, h2, h3, h3, h4, .nav-block .nav-link { font-family: 'Yanone Kaffeesatz'; font-weight: normal;  }
 h2 { font-size: 3em;  }
 h3 { font-size: 2.4em;  }
 h4 { font-size: 1.4em;  }
-.nav-block .nav-link { font-family: 'Yanone Kaffeesatz'; font-size: 1.7em; font-weight: normal;   }
+.nav-block .nav-link { font-size: 1.7em; }
 p {line-height: 1.5em;}
-
+th .annotation { font-weight: normal; font-style: italic; font-size: 0.9em;}
 
 
 

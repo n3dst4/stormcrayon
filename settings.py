@@ -1,10 +1,12 @@
 # Django settings for stormcrayon project.
+from localsettings import *
+
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Neil de Carteret', 'nel.decarteret@gmail.com'),
+    ('Neil de Carteret', 'neil.decarteret@gmail.com'),
 )
 
 MANAGERS = ADMINS

@@ -3,7 +3,7 @@
 
 
 /* colours */
-html { background: #3d3d3d url(/static/images/background.png); }
+html { background: #3d3d3d url(/static/images/background.png); color: #444;}
 body { background-image: url(/static/images/shadow.png); background-repeat: repeat-x; }
 
 

@@ -21,12 +21,8 @@
 {% endmacro %}
 
 {% block main %}
-    {% for link in sites %}
+    {% for link in links %}
         {% usemacro linkette link %}
     {% endfor %}
-    
-    {% for link in other %}
-        {% usemacro linkette link %}
-    {% endfor %}   
 {% endblock %}
 
