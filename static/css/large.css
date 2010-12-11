@@ -70,7 +70,7 @@ div#container { max-width: 980px; min-width: 630px; margin: 0 auto;  }
 div#main {position: relative; z-index: 200;}
 body.ie6 div#container { width: expression(Math.max(Math.min(document.documentElement.clientWidth, 980), 630)); }
 
-.module { margin-bottom: 2em;  }
+.module { margin-bottom: 4em;  }
 
 img.thumb { display: block; float: left;  margin-right: 2%; width: 40.425%;
     margin-bottom: -1px;
@@ -91,7 +91,7 @@ header { height: 16em; position: relative; margin: 0 2%; z-index: 100; padding: 
 .nav-block ul { margin: 0; padding: 0; height: 100%; width: 100% }
 .nav-block li { display: block; float: left; margin: 10px 0 0 0; width: 49%; text-align: center;}
 
-.misc-nav { height: 1.8em; padding-top: 0.2em; qposition: relative; qtop: -2em;}
+.misc-nav { height: 1.7em; padding-top: 0.3em; qposition: relative; qtop: -2em;}
 .misc-nav .also-on , .misc-nav .email-me{ position: relative; z-index: 3;}
 .misc-nav .also-on { float: right; }
 .misc-nav .email-me{ float: left; }
