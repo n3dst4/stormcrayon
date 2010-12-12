@@ -12,11 +12,16 @@ a:hover { color: white; text-decoration: underline; }
 /* layout */
 html { height: 100%; overflow-y: hidden; }
 body { height: 100%; }
-div#frame-wrapper { position: absolute; top: 50px; bottom: 0; left: 0; right: 0;}
+Header { width: 95.918%; margin: 0 auto; padding-top: 0.5em; overflow: hidden;}
+div#frame-wrapper { position: absolute; top: 45px; bottom: 0; left: 0; right: 0;}
 
-.lt8 div#frame-wrapper { height: expression(document.body.clientHeight - 50); }
+.lt8 div#frame-wrapper { height: expression(document.body.clientHeight - 45); }
 
 iframe { width: 100%; height: 100%; }
+
+.back-to-site { float: left; }
+.remove-frame { float: right; }
+.name { text-align: center; clear: both;}
 
 
 

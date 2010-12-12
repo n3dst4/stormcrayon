@@ -8,8 +8,11 @@
 
 
 {% block header %}
-    <p><a href="{% url stormcrayon.core.views.portfolio %}#{{id}}"><<< Back to Neil de Carteret's portfolio</a>
-    <p><a href="{{url}}">[X] Remove frame</a>
+    <header>
+        <p class="back-to-site"><a href="{% url stormcrayon.core.views.portfolio %}#{{id}}"><< Back to Neil de Carteret's portfolio</a>
+        <p class="remove-frame"><a href="{{url}}" target="_top">Remove this frame</a>
+        <h2 class="name">{{link.name}}</h2>
+    </header>
 {% endblock %}
 
 

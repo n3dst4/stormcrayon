@@ -57,11 +57,12 @@ class ContactForm(forms.Form):
     
 def frame(request, id):
     try:
-        url = FeaturedLink.objects.filter(live=True, id=id)[0].address
+        link = FeaturedLink.objects.filter(live=True, id=id)[0]
     except:
         raise Http404
     return render_to_response('frame.html', {
-        "url": url,
+        "url": link.address,
+        "link": link,
         "id": id
     })
     

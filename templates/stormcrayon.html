@@ -11,28 +11,30 @@
     </script>
 
     <link rel="stylesheet" href="/static/css/styles.css">
-    <link rel="stylesheet" media="only screen and (min-width: 601px)" href="/static/css/large.css">
-    <link rel="stylesheet" media="only screen and (min-width: 601px)" href="/static/plugins/fancybox/jquery.fancybox-1.3.1.css">
-    <link rel="stylesheet" media="only screen and (max-width: 600px)" href="/static/css/small.css?v=1">
+    <link rel="stylesheet" media="screen" href="/static/css/large.css">
+
+    <!--<link rel="stylesheet" media="only screen and (min-width: 601px)" href="/static/css/large.css">-->
+    <!--<link rel="stylesheet" media="only screen and (min-width: 601px)" href="/static/plugins/fancybox/jquery.fancybox-1.3.1.css">-->
+    <!--<link rel="stylesheet" media="only screen and (max-width: 600px)" href="/static/css/small.css?v=1">-->
 
     <!-- Grodyquery: first we make the html background red, then use a CSS
     media query to turn it green -->
-    <style type="text/css">
-    html { background-color: red; }
-    @media only all { html { background-color: green; } }
-    </style>
+    <!--<style type="text/css">-->
+    <!--html { background-color: red; }-->
+    <!--@media only all { html { background-color: green; } }-->
+    <!--</style>-->
 
     <!--this script then tests the background to see if it's red or green, and
     thus determines whether media queries are supported. If not, magic ensues
     to find all the <link media="only screen and..." tags and repurpose them -->
-    <script type="text/javascript">
-    {%include "grodyquery-part-one.js"%}    
-    </script>
+    <!--<script type="text/javascript">-->
+    <!--{%include "grodyquery-part-one.js"%}    -->
+    <!--</script>-->
     
     <!-- finally set the html background back again -->
-    <style type="text/css">
-    html { background-color: white; }
-    </style>
+    <!--<style type="text/css">-->
+    <!--html { background-color: white; }-->
+    <!--</style>-->
     
 {% endblock %}
 
@@ -71,9 +73,9 @@
             <div class="column grid_12">
                 <div class="also-on">
                     I'm also on
-                    <a href="http://blog.lumphammer.com/" target="_new">Posterous (Blog)</a> |
-                    <a href="https://github.com/n3dst4/" target="_new">GitHub</a> |
-                    <a href="http://uk.linkedin.com/in/neildecarteret" target="_new">LinkedIn</a>
+                    <a href="http://blog.lumphammer.com/" target="_blank">Posterous (Blog)</a> |
+                    <a href="https://github.com/n3dst4/" target="_blank">GitHub</a> |
+                    <a href="http://uk.linkedin.com/in/neildecarteret" target="_blank">LinkedIn</a>
                 </div>
                 <div class="email-me">
                     Email me, I'm
