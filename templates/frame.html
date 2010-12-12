@@ -1,0 +1,26 @@
+{% extends "boilerplate.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="/static/css/styles.css">
+<link rel="stylesheet" href="/static/css/frame.css">
+{% endblock %}
+
+
+
+{% block header %}
+    <p><a href="{% url stormcrayon.core.views.portfolio %}#{{id}}"><<< Back to Neil de Carteret's portfolio</a>
+    <p><a href="{{url}}">[X] Remove frame</a>
+{% endblock %}
+
+
+
+{% block main %}
+    <div id="frame-wrapper">
+        <iframe src="{% firstof params.url url %}" class="" >
+    </div>
+{% endblock %}
+
+
+
+{% block footer %}
+{% endblock %}

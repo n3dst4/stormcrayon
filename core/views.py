@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, Http404 
 
 from django.shortcuts import render_to_response
 from stormcrayon.core.models import FeaturedLink
@@ -51,6 +51,45 @@ class ContactForm(forms.Form):
     interest_web_design = forms.BooleanField(required=False, label="Web design")
     interest_other_development = forms.BooleanField(required=False, label="Other development")
     interest_graphic_design = forms.BooleanField(required=False, label="Graphic design")
+    
+    
+    
+    
+def frame(request, id):
+    try:
+        url = FeaturedLink.objects.filter(live=True, id=id)[0].address
+    except:
+        raise Http404
+    return render_to_response('frame.html', {
+        "url": url,
+        "id": id
+    })
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     

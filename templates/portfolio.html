@@ -1,28 +1,23 @@
 {% extends "stormcrayon.html" %}
-{% load macros %}
-
-{% macro linkette link %}
-    <div class="row">
-        <div class="column grid_12 module">
-            {% if link.image %}
-                <a href="{{link.address}}" target="_new">
-                    <img src="{{link.image.thumbnail.absolute_url}}"
-                         alt="{{link.name}}"
-                         title="{{link.name}}"
-                         class="thumb">
-                </a>
-            {% endif %}            
-            <h3>{{link.name}}</h3>
-            <div class="text">
-                {{link.description_html|safe}}
-            </div>
-        </div>
-    </div>
-{% endmacro %}
 
 {% block main %}
     {% for link in links %}
-        {% usemacro linkette link %}
+        <div class="row">
+            <div class="column grid_12 module">
+                {% if link.image %}
+                    <a href="{% url stormcrayon.core.views.frame id=link.id%}">
+                        <img src="{{link.image.thumbnail.absolute_url}}"
+                             alt="{{link.name}}"
+                             title="{{link.name}}"
+                             class="thumb">
+                    </a>
+                {% endif %}            
+                <a href="{% url stormcrayon.core.views.frame id=link.id%}" name="{{link.id}}"><h3>{{link.name}}</h3></a>
+                <div class="text">
+                    {{link.description_html|safe}}
+                </div>
+            </div>
+        </div>
     {% endfor %}
 {% endblock %}
 

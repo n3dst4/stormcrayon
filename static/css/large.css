@@ -175,6 +175,7 @@ footer { color: #bbb;  }
 
 th .annotation { color: #666;}
 
+.error { color: darkgoldenrod; }
 
 /*div#container { background-color: #1d2a5a; }
 div.row {background-color: #151f43; }
@@ -187,7 +188,7 @@ div.column {background-color: #344ca3; }*/
  */
 h1, h2, h3, h3, h4, .nav-block .nav-link { font-family: 'Yanone Kaffeesatz'; font-weight: normal;  }
 h2 { font-size: 3em;  }
-h3 { font-size: 2.4em;  }
+h3 { font-size: 2.2em;  }
 h4 { font-size: 1.4em;  }
 .nav-block .nav-link { font-size: 1.7em; }
 p {line-height: 1.5em;}
