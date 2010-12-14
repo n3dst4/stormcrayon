@@ -56,16 +56,21 @@
     <div class="logo"><a href="/">
         <img src="/static/images/logo.png" alt="Neil de Carteret" title="Neil de Carteret">
     </a></div>
+    {% url stormcrayon.core.views.portfolio as portfolio_url %}
+    {% url about as about_url %}
+    {% url resume as resume_url %}
+    {% url stormcrayon.core.views.contact as contact_url %}
+    
     <div class="nav-block nav-block-left">
         <ul>
-            <li>{% usemacro navlink "/" "Portfolio" "portfolio" %}
-            <li>{% usemacro navlink "/about/" "About" "about" %}
+            <li>{% usemacro navlink portfolio_url "Portfolio" "portfolio" %}
+            <li>{% usemacro navlink about_url "About" "about" %}
         </ul>
     </div>
     <div class="nav-block nav-block-right">
         <ul>
-            <li>{% usemacro navlink "/resume/" "Resum&eacute;" "resume" %}
-            <li>{% usemacro navlink "/contact/" "Contact" "contact" %}
+            <li>{% usemacro navlink resume_url "Resum&eacute;" "resume" %}
+            <li>{% usemacro navlink contact_url "Contact" "contact" %}
         </ul>
     </div>
     <div class="misc-nav">
