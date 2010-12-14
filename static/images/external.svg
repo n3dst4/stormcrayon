@@ -15,7 +15,7 @@
    version="1.1"
    inkscape:version="0.47 r22583"
    sodipodi:docname="external.svg"
-   inkscape:export-filename="\\SERENITY\ndc\webapps\stormcrayon\stormcrayon\static\images\external.png"
+   inkscape:export-filename="K:\projects\stormcrayon\stormcrayon\static\images\external.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -34,6 +34,13 @@
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_x="0 : 0.5 : 1"
        sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3600"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -43,8 +50,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="32"
-     inkscape:cx="4.4887771"
-     inkscape:cy="4.6950752"
+     inkscape:cx="-1.3862229"
+     inkscape:cy="5.9450752"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -59,6 +66,13 @@
        id="grid2830"
        empspacing="2"
        visible="false"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+    <inkscape:grid
+       type="xygrid"
+       id="grid3590"
+       empspacing="2"
+       visible="true"
        enabled="true"
        snapvisiblegridlinesonly="true" />
   </sodipodi:namedview>
@@ -80,11 +94,11 @@
      id="layer1"
      transform="translate(-326.42856,-464.50504)">
     <path
-       style="fill:#70dbff;fill-opacity:0.5;stroke:#70dbff;stroke-linejoin:round;stroke-opacity:1"
+       style="fill:#8599ae;fill-opacity:0.50196081000000004;stroke:#8599ae;stroke-linejoin:round;stroke-opacity:1"
        d="m 326.92856,468.00504 0,6 6,0 0,-4 -2,2 -2,-2 2,-2 -4,0 z"
        id="rect3606" />
     <path
-       style="color:#000000;fill:#70dbff;fill-opacity:0.50000000000000000;fill-rule:nonzero;stroke:#70dbff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="color:#000000;fill:#8599ae;fill-opacity:0.50196081;fill-rule:nonzero;stroke:#8599ae;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 328.92856,470.00504 2,-2 0,-1 -1,-1 1,-1 5,0 0,5 -1,1 -1,-1 -1,0 -2,2 -2,-2 z"
        id="path3608-4" />
     <path
@@ -101,5 +115,19 @@
        inkscape:export-filename="\\SERENITY\ndc\webapps\stormcrayon\stormcrayon\static\images\external_o.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
+    <g
+       id="g3617"
+       inkscape:export-filename="K:\projects\stormcrayon\stormcrayon\static\images\external_o.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <path
+         id="rect3606-17"
+         d="m 326.92856,479.00504 0,6 6,0 0,-4 -2,2 -2,-2 2,-2 -4,0 z"
+         style="fill:#bac6d1;fill-opacity:0.50196081000000004;stroke:#bac6d1;stroke-linejoin:round;stroke-opacity:1" />
+      <path
+         id="path3608-4-4"
+         d="m 328.92856,481.00504 2,-2 0,-1 -1,-1 1,-1 5,0 0,5 -1,1 -1,-1 -1,0 -2,2 -2,-2 z"
+         style="color:#000000;fill:#bac6d1;fill-opacity:0.50196081;fill-rule:nonzero;stroke:#bac6d1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    </g>
   </g>
 </svg>

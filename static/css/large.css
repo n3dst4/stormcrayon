@@ -137,7 +137,12 @@ form.contact table input.text, form.contact table textarea { width: 95%; }
 .misc-nav { background-position: left bottom; }
 .misc-nav a, .misc-nav a:link, .misc-nav a:visited,
 footer a, footer a:link, footer a:visited { color: #8599ae; } 
-.misc-nav a:hover, footer a:hover { color: #bac6d1; } 
+.misc-nav a:hover, footer a:hover { color: #bac6d1; }
+
+
+
+a.external {  background: url(/static/images/external.png); background-position: 100% 50%;
+    background-repeat: no-repeat; padding-right: 14px; }
 
 .nav-block-left ul { background-position: left middle; }
 .nav-block-right ul { background-position: right center; }
