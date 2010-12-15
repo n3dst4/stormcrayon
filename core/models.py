@@ -26,7 +26,8 @@ class FeaturedLink (models.Model):
     sequence = models.IntegerField(default=0)
     
     def save(self):
-        self.description_html = markdown.markdown(self.description_markdown)
+        foo = "\n[url]: /frame/" + str(self.id)
+        self.description_html = markdown.markdown(self.description_markdown + foo)
         super(FeaturedLink, self).save()
         
     class Meta (object):
