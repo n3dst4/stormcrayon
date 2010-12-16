@@ -1,11 +1,30 @@
 # Django settings for stormcrayon project.
-from localsettings import *
+DEBUG = False
+EMAIL_HOST="smtp.gmail.com"
+EMAIL_PORT=587
+EMAIL_USE_TLS=True
+EMAIL_HOST_USER="xxxxxxxxxxx@gmail.com"
+EMAIL_HOST_PASSWORD="xxxxxxxxxxxxx"
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'stormcrayon',
+        'USER': 'stormcrayon',
+        'PASSWORD': 'stormcrayon', 
+        'HOST': '10.0.0.9',        # ""==localhost, but pg localhost connections don't use password auth
+        'PORT': '',                # ""==default
+    }
+}
+
+# Make this unique, and don't share it with anybody.
+# head -c 36 /dev/urandom |base64 or some other generator
+SECRET_KEY = '94%7rifv%h0^*i+mpd+dwui0ua#_64z88-qya4ig!r$4r4@8j1'
 
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Neil de Carteret', 'neil.decarteret@gmail.com'),
+    ('Neil de Carteret', 'xxx@xxx.xxx'),
 )
 
 MANAGERS = ADMINS
@@ -50,8 +69,7 @@ MEDIA_URL = '/static/'
 # Examples: "http://foo.com/media/", "/media/".
 ADMIN_MEDIA_PREFIX = '/media/' 
 
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = '94%7rifv%h0^*i+mpd+dwui0ua#_64z88-qya4ig!r$4r4@8j1'
+
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
