@@ -9,6 +9,7 @@ from django import forms
 from django.template import RequestContext
 from django.core.mail import send_mail
 from django.views.decorators.cache import cache_page
+from django.views.decorators.vary import vary_on_cookie
 
 
 @cache_page(60 * 15)
@@ -19,7 +20,8 @@ def portfolio(request):
         "nav_active": "portfolio"
     })
     
-@cache_page(60 * 15)    
+@cache_page(60 * 15)
+@vary_on_cookie
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
