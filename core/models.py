@@ -1,6 +1,8 @@
 from django.db import models
 from sorl.thumbnail.fields import ImageWithThumbnailsField
 import markdown
+from django.dispatch import Signal
+
 
 class FeaturedLink (models.Model):
     name = models.CharField(max_length=255)
@@ -28,16 +30,14 @@ class FeaturedLink (models.Model):
     def save(self):
         foo = "\n[url]: /frame/" + str(self.id)
         self.description_html = markdown.markdown(self.description_markdown + foo)
+        links_updated.send(sender=self)
         super(FeaturedLink, self).save()
         
     class Meta (object):
         ordering = ("sequence", "name")
-        
-        
-def set_up_cache_trashing():
-    from django.core.cache import cache
-    from django.db.models.signals import post_save
-    def trash_the_cache(sender, **kwargs):
-        cache.clear()
-    post_save.connect(trash_the_cache)
-set_up_cache_trashing()
+
+links_updated = Signal(providing_args=[])        
+from django.core.cache import cache
+def trash_the_cache(sender, **kwargs):
+    cache.clear()
+links_updated.connect(trash_the_cache)
