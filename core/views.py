@@ -8,9 +8,10 @@ from django.db import connection
 from django import forms
 from django.template import RequestContext
 from django.core.mail import send_mail
+from django.views.decorators.cache import cache_page
 
 
-
+@cache_page(60 * 15)
 def portfolio(request):
     links = FeaturedLink.objects.filter(live=True)
     return render_to_response('portfolio.html', {
@@ -18,7 +19,7 @@ def portfolio(request):
         "nav_active": "portfolio"
     })
     
-    
+@cache_page(60 * 15)    
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -54,7 +55,7 @@ class ContactForm(forms.Form):
     
     
     
-    
+@cache_page(60 * 15)    
 def frame(request, id):
     try:
         link = FeaturedLink.objects.filter(live=True, id=id)[0]
