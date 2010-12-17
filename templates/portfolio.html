@@ -14,10 +14,12 @@
                              title="{{link.name}}"
                              class="thumb">
                     </a>
-                {% endif %}            
-                <a href="{% url stormcrayon.core.views.frame id=link.id%}" target="_top">
-                    <h3>{{link.name}}</h3>
-                </a>
+                {% endif %}
+                <h3>
+                    <a href="{% url stormcrayon.core.views.frame id=link.id%}" target="_top">
+                        {{link.name}}
+                    </a>
+                </h3>
                 <div class="text">
                     {{link.description_html|safe}}
                 </div>
