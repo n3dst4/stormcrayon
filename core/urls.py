@@ -16,4 +16,5 @@ urlpatterns = patterns('stormcrayon.core.views',
     #        "url": "http://google.com"
     #    }}),
     (r'^frame/(?P<id>.*)', "frame"),
+    (r'^error/', "error"),
 )

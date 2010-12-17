@@ -68,8 +68,11 @@ def frame(request, id):
         "link": link,
         "id": id
     })
-    
-    
+
+
+def error(request):
+    raise Exception("This is a test error")
+
     
     
     

@@ -34,5 +34,10 @@ class FeaturedLink (models.Model):
         ordering = ("sequence", "name")
         
         
-        
-        
+def set_up_cache_trashing():
+    from django.core.cache import cache
+    from django.db.models.signals import post_save
+    def trash_the_cache(sender, **kwargs):
+        cache.clear()
+    post_save.connect(trash_the_cache)
+set_up_cache_trashing()
