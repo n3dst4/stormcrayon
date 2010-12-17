@@ -18,9 +18,9 @@
 .grid_9 { width:72.917%; } /* 700 */
 .grid_10 { width:81.25%; } /* 780 */
 .grid_11 { width:89.583%; } /* 860 */
-.grid_12 { width:97.917%; } /* 940 */
+.grid_12 { width:98%; } /* 940 */
 .column { margin: 0 1%; overflow: visible; float: left; }
-.row { width: 97.959%; margin: 0 1.064%; overflow: hidden; }
+.row { width: 98%; margin: 0 1.064%; overflow: hidden; }
 
 /* Original */
 
@@ -68,7 +68,7 @@ body.ie6 div#container { width: expression(Math.max(Math.min(document.documentEl
 
 .module { margin-bottom: 4em;  }
 
-img.thumb { display: block; float: left;  margin-right: 2%; width: 40.425%;
+img.thumb { display: block; float: left;  margin-right: 2%; width: 40.5%; max-width: 380px;
     margin-bottom: -1px;
     border-right: 1px solid #252525; border-bottom: 1px solid #252525; }
 .ie6 img.thumb {
@@ -201,6 +201,30 @@ h4 { font-size: 1.4em;  }
 p {line-height: 1.5em;}
 th .annotation { font-weight: normal; font-style: italic; font-size: 0.9em;}
 .module h3 a {  text-decoration: none; }
+
+
+
+/*
+main 980
+row 97.959%         959.9982
+grid_12 97.917%   
+
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
 
 
 
