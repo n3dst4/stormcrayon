@@ -8,7 +8,7 @@ class FeaturedLinkAdmin(admin.ModelAdmin):
     list_display_links = ("name",)
     list_editable = ("sequence", "live")
     list_filter = ("category",)
-    readonly_fields = ("description_html",)
+    readonly_fields = ("description_html", "id")
     ordering = ("sequence", "name")
 
 admin.site.register(FeaturedLink, FeaturedLinkAdmin)
