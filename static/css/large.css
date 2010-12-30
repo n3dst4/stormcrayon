@@ -106,7 +106,7 @@ footer { text-align: center; margin: 1em 0;}
 
 .chatter { padding: 1em; margin-bottom: 1em;}
 
-.illo-wrapper { padding: 1em 1em 2em; text-align: center; overflow: hidden; margin-bottom: 1em;}
+.illo-wrapper { padding: 1em 1em 2em; text-align: center; overflow: visible; margin-bottom: 1em;}
     
 .csstransforms .illo-wrapper { margin: 1em 0 2em;
     transform: rotate(2deg);

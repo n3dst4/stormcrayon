@@ -1,5 +1,6 @@
 {% extends "boilerplate.html" %}
 {% load macros %}
+{% load cms_tags %}
 
 {% block styles %}
     <!--// STO  R  M       C    R    A     Y     O      N -->
@@ -57,7 +58,7 @@
         <img src="/static/images/logo.png" alt="Neil de Carteret" title="Neil de Carteret">
     </a></div>
     {% url stormcrayon.core.views.portfolio as portfolio_url %}
-    {% url about as about_url %}
+    {% page_url "about" as about_url %}
     {% url resume as resume_url %}
     {% url stormcrayon.core.views.contact as contact_url %}
     

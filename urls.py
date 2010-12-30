@@ -19,3 +19,8 @@ urlpatterns = patterns('',
 
     (r'', include('stormcrayon.core.urls')),
 )
+
+
+urlpatterns += patterns("",
+    (r'^', include("cms.urls")),
+)

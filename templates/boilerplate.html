@@ -1,5 +1,11 @@
 <!doctype html>
 <html lang="en" class="no-js">
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6 lt7 lt8 lt9"><![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie ie7 gt6 lt8 lt9"><![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8 gt6 gt7 lt9"><![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie ie9 gt6 gt7 gt8"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"><!--<![endif]-->
+  
 <head>
   <meta charset="utf-8">
   <!--
@@ -47,12 +53,7 @@
   {% block styles %}{# MAGICK!!! #}{% endblock %}
   
 </head>
-<!--[if lt IE 7 ]><body class="ie ie6 lt7 lt8 lt9"><![endif]-->
-<!--[if IE 7 ]><body class="ie ie7 gt6 lt8 lt9"><![endif]-->
-<!--[if IE 8 ]><body class="ie ie8 gt6 gt7 lt9"><![endif]-->
-<!--[if IE 9 ]><body class="ie ie9 gt6 gt7 gt8"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--><body><!--<![endif]-->
-
+<body>
   <div id="container">
     {% block header %}Boilerplate header{% endblock %}
     

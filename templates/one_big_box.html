@@ -1,0 +1,17 @@
+{% extends "stormcrayon.html" %}
+{% load cms_tags %}
+
+{% block title %}{{block.super}} - {% page_attribute "page_title" %}{% endblock %}3
+
+{% block main %}
+<div class="row">
+    <div class="column grid_12">
+        <div class="chatter">
+            {% placeholder 'Main Text Area' %}
+        </div>
+    </div>
+</div>
+    
+    
+{% endblock %}
+
