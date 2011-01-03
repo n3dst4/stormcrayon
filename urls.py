@@ -17,10 +17,18 @@ urlpatterns = patterns('',
     (r'^static/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': '/home/ndc/projects/stormcrayon/stormcrayon/static'}),
 
+)
+
+urlpatterns += patterns("",
     (r'', include('stormcrayon.core.urls')),
 )
 
 
 urlpatterns += patterns("",
-    (r'^', include("cms.urls")),
+    (r'', include("cms.urls")),
 )
+
+
+
+
+

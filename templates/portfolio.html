@@ -3,7 +3,7 @@
 {% block title %}{{block.super}} - Portfolio{% endblock %}3
 
 {% block main %}
-    {% for link in links %}
+    {% for link in xlinks %}
         <div class="row">
             <div class="column grid_12 module" id="{{link.id}}">
                 {% if link.image %}

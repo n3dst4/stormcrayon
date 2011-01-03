@@ -1,6 +1,7 @@
 {% extends "boilerplate.html" %}
 {% load macros %}
 {% load cms_tags %}
+{% load captureas %}
 
 {% block styles %}
     <!--// STO  R  M       C    R    A     Y     O      N -->
@@ -58,20 +59,27 @@
         <img src="/static/images/logo.png" alt="Neil de Carteret" title="Neil de Carteret">
     </a></div>
     {% url stormcrayon.core.views.portfolio as portfolio_url %}
-    {% page_url "about" as about_url %}
-    {% url resume as resume_url %}
+    
+    {% captureas about_url %}
+        {% page_url "about" %}
+    {% endcaptureas %}
+    
+    {% captureas resume_url %}
+        {% page_url "resume" %}
+    {% endcaptureas %}
+    
     {% url stormcrayon.core.views.contact as contact_url %}
     
     <div class="nav-block nav-block-left">
         <ul>
-            <li>{% usemacro navlink portfolio_url "Portfolio" "portfolio" %}
-            <li>{% usemacro navlink about_url "About" "about" %}
+            <li>{% usemacro navlink portfolio_url "Portfolio" "/" %}
+            <li>{% usemacro navlink about_url "About" "/about/" %}
         </ul>
     </div>
     <div class="nav-block nav-block-right">
         <ul>
-            <li>{% usemacro navlink resume_url "Resum&eacute;" "resume" %}
-            <li>{% usemacro navlink contact_url "Contact" "contact" %}
+            <li>{% usemacro navlink resume_url "Resum&eacute;" "/resume/" %}
+            <li>{% usemacro navlink contact_url "Contact" "/contact/" %}
         </ul>
     </div>
     <div class="misc-nav">

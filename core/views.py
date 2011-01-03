@@ -13,12 +13,20 @@ from django.views.decorators.vary import vary_on_cookie
 
 
 @cache_page(60 * 15)
+@vary_on_cookie
 def portfolio(request):
-    links = FeaturedLink.objects.filter(live=True)
-    return render_to_response('portfolio.html', {
-        'links': links,
+    xlinks = FeaturedLink.objects.filter(live=True)
+    return render_to_response('portfolio.html', RequestContext(request, {
+        'xlinks': xlinks,
         "nav_active": "portfolio"
-    })
+    }))
+    
+    
+@cache_page(60 * 15)
+@vary_on_cookie
+def primple(request):
+    return render_to_response("portfolio.html")
+
     
 @cache_page(60 * 15)
 @vary_on_cookie
