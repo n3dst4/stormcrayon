@@ -68,7 +68,7 @@ class ContactForm(forms.Form):
 @cache_page(60 * 15)    
 def frame(request, id):
     try:
-        link = FeaturedLink.objects.filter(live=True, id=id)[0]
+        link = FeaturedLink.objects.filter(live=True, slug=id)[0]
     except:
         raise Http404
     return render_to_response('frame.html', {

@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="column grid_12 module" id="{{link.id}}">
+        {% if link.image %}
+            <a href="{% url stormcrayon.core.views.frame id=link.id%}"
+               target="_top">
+                <img src="{{link.image.thumbnail.absolute_url}}"
+                     alt="{{link.name}}"
+                     title="{{link.name}}"
+                     class="thumb">
+            </a>
+        {% endif %}
+        <h3>
+            <a href="{% url stormcrayon.core.views.frame id=link.id%}" target="_top">
+                {{link.name}}
+            </a>
+        </h3>
+        <div class="text">
+            {{link.description_html|safe}}
+        </div>
+    </div>
+</div>

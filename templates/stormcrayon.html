@@ -61,11 +61,13 @@
     {% url stormcrayon.core.views.portfolio as portfolio_url %}
     
     {% captureas about_url %}
-        {% page_url "about" %}
+        {# page_url "about" #}
+        /about
     {% endcaptureas %}
     
     {% captureas resume_url %}
-        {% page_url "resume" %}
+        {# page_url "resume" #}
+        /resume
     {% endcaptureas %}
     
     {% url stormcrayon.core.views.contact as contact_url %}
