@@ -58,16 +58,17 @@
     <div class="logo"><a href="/">
         <img src="/static/images/logo.png" alt="Neil de Carteret" title="Neil de Carteret">
     </a></div>
-    {% url stormcrayon.core.views.portfolio as portfolio_url %}
+   
+    {% captureas portfolio_url %}
+        {% page_url "portfolio" %}
+    {% endcaptureas %}
     
     {% captureas about_url %}
-        {# page_url "about" #}
-        /about
+        {% page_url "about" %}
     {% endcaptureas %}
     
     {% captureas resume_url %}
-        {# page_url "resume" #}
-        /resume
+        {% page_url "resume" %}
     {% endcaptureas %}
     
     {% url stormcrayon.core.views.contact as contact_url %}

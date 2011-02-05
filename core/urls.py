@@ -10,7 +10,7 @@ urlpatterns = patterns('stormcrayon.core.views',
     #(r'^portfolio/', "portfolio"),
     (r'^frame/(?P<id>.*)', "frame"),
     (r'^error/', "error"),
-    (r'^$', 'portfolio'),
+    #(r'^$', 'portfolio'),
     
 )
 

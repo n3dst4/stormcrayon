@@ -5,7 +5,6 @@ from django.dispatch import Signal
 import re
 from cms.models import CMSPlugin
 
-
 class FeaturedLink (CMSPlugin):
     slug = models.CharField(max_length=255, unique=True)
     name = models.CharField(max_length=255)
@@ -42,8 +41,8 @@ class FeaturedLink (CMSPlugin):
         
     def calculate_slug(self):
         slug = self.name.lower()
-        slug = id.replace("'", "");
-        return re.sub(r'[^a-z0-9]+', '-', id).strip('-')
+        slug = slug.replace("'", "");
+        return re.sub(r'[^a-z0-9]+', '-', slug).strip('-')
         
     def __unicode__(self):
         return self.name        
