@@ -71,11 +71,11 @@ def frame(request, id):
         link = FeaturedLink.objects.filter(live=True, slug=id)[0]
     except:
         raise Http404
-    return render_to_response('frame.html', {
+    return render_to_response('frame.html', RequestContext(request, {
         "url": link.address,
         "link": link,
         "id": id
-    })
+    }))
 
 
 def error(request):
