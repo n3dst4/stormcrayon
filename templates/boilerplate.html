@@ -75,7 +75,14 @@
   <script src="/static/js/plugins.js?v=1"></script>
   <!--<script src="/static/js/jquery.swoosh.js?v=1"></script>-->
   <!--<script src="/static/js/script.js?v=1"></script>-->
-  
+  <script>
+    /* 
+     * This is a bit weak but django-cms's edit toolbar splats it's own jQuery
+     * onto the page and then expects to find it in global scope later on...
+     */
+    myJQuery = jQuery;
+    jQuery.noConflict(true);
+  </script>
 
   
   <!--<script src="/static/js/profiling/yahoo-profiling.min.js?v=1"></script>-->

@@ -1,7 +1,7 @@
 <div class="row">
     <div class="column grid_12 module" id="{{link.id}}">
         {% if link.image %}
-            <a href="{% url stormcrayon.core.views.frame id=link.id%}"
+            <a href="{% url stormcrayon.core.views.frame id=link.slug%}"
                target="_top">
                 <img src="{{link.image.thumbnail.absolute_url}}"
                      alt="{{link.name}}"
